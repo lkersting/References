@@ -1,0 +1,125 @@
+\documentclass{beamer}
+\usetheme[white]{Wisconsin}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{color}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+\usepackage{amsthm} \usepackage{amsmath}
+\usepackage[mathcal]{euscript} \usepackage{color}
+\usepackage{textcomp}
+\usepackage{algorithm,algorithmic}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[absolute,overlay]{textpos}
+  \setlength{\TPHorizModule}{1mm}
+  \setlength{\TPVertModule}{1mm}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+  backgroundcolor=\color{lbcolor},
+  tabsize=4,
+  rulecolor=,
+  language=c++,
+  basicstyle=\scriptsize,
+  upquote=true,
+  aboveskip={1.5\baselineskip},
+  columns=fixed,
+  showstringspaces=false,
+  extendedchars=true,
+  breaklines=true,
+  prebreak =
+  \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+  frame=single,
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  identifierstyle=\ttfamily,
+  keywordstyle=\color[rgb]{0,0,1},
+  commentstyle=\color[rgb]{0.133,0.545,0.133},
+  stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+
+%% colors
+\setbeamercolor{boxheadcolor}{fg=white,bg=UWRed}
+\setbeamercolor{boxbodycolor}{fg=black,bg=white}
+
+%%----------------------------------------------------------------------------%%
+\author{Luke J. Kersting
+    \\ NEEP
+    \\ University of Wisconsin - Madison
+    \\ FRENSIE Meeting
+}
+
+\date{\today}
+\title{Update: Electron Mode in FRENSIE}
+\begin{document}
+\maketitle
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Electron Mode}
+
+  \begin{block}{Capabilities}
+    \begin{itemize}
+      \item Single Scattering Events from 100 GeV to 10 eV
+      \item Elastic, Bremsstrahlung, Electroionization, Atomic Excitation 
+      \item Secondary particles created, but photons not tracked
+      \item Atomic relaxation implemented
+    \end{itemize}
+  \end{block}
+    
+  \begin{block}{Problems}
+    \begin{itemize}
+      \item Absorption at low energies
+      \item Negative energy from Electroionization
+    \end{itemize}    
+  \end{block}  
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Absorption at low energies}
+
+  \begin{itemize}
+    \item At energies near the cutoff (10 eV) the reaction cross section is dominated by elastic scattering (by order $10^7$ for H)
+    \item It is unlikely the electron will scatter below the cutoff energy 
+    \item A temporary fix is to raise the cutoff energy (to 15eV for H) to prevent indefinite elastic scattering
+    \item No mention of this issue in MCNP or Penelope 
+  \end{itemize}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Negative energy from Electroionization}
+  
+  \begin{itemize}
+    \item ACE tables provide CDF of the knock-on energy, $E_{knock}$, based on the incident electron energy.
+    \item When the incident electron energy is between two tables a weighted random variable is used to chose the appropriate table
+    \item This can result in a $E_{knock}$ that is larger than physically possible
+     \item In this case the energy of incident electron is reduce to $1E{-15}$
+    \item MCNP avoids this by interpolation between tables, which is more computationally expensive
+  \end{itemize}
+
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Next Step}
+  
+  \begin{block}{Testing}
+    \begin{itemize}
+      \item Run tests in MCNP and FRENSIE for comparison
+      \item Start with Hydrogen spheres
+    \end{itemize}
+  \end{block}
+  
+    \begin{block}{Possible Further Work}
+    \begin{itemize}
+      \item Create testing mode were no secondary particles are created
+      \item Implement other options for the bremsstrahlung photon ejection angle
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+\end{document}
