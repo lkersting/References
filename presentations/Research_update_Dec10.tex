@@ -1,0 +1,216 @@
+\documentclass{beamer}
+\usetheme[white]{Wisconsin}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{color}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+\usepackage{amsthm} \usepackage{amsmath}
+\usepackage[mathcal]{euscript} \usepackage{color}
+\usepackage{textcomp}
+\usepackage{algorithm,algorithmic}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[absolute,overlay]{textpos}
+  \setlength{\TPHorizModule}{1mm}
+  \setlength{\TPVertModule}{1mm}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+  backgroundcolor=\color{lbcolor},
+  tabsize=4,
+  rulecolor=,
+  language=c++,
+  basicstyle=\scriptsize,
+  upquote=true,
+  aboveskip={1.5\baselineskip},
+  columns=fixed,
+  showstringspaces=false,
+  extendedchars=true,
+  breaklines=true,
+  prebreak =
+  \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+  frame=single,
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  identifierstyle=\ttfamily,
+  keywordstyle=\color[rgb]{0,0,1},
+  commentstyle=\color[rgb]{0.133,0.545,0.133},
+  stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+
+%% colors
+\setbeamercolor{boxheadcolor}{fg=white,bg=UWRed}
+\setbeamercolor{boxbodycolor}{fg=black,bg=white}
+
+%%----------------------------------------------------------------------------%%
+\author{Luke J. Kersting
+    \\ NEEP
+    \\ University of Wisconsin - Madison
+    \\ FRENSIE Meeting
+}
+
+\date{\today}
+\title{Electron Hard Scattering in FRENSIE}
+\begin{document}
+\maketitle
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Introduction}
+
+  \begin{itemize}
+    \item Simulation of hard electron transport events
+      \medskip
+    \item Atomic excitation events
+      \medskip
+    \item Hard elastic scattering events
+      \medskip
+    \item Electroionization events
+      \medskip
+    \item Bremmstrahlung events
+  \end{itemize}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Electron Transport in Monte Carlo Codes}
+
+  \begin{block}{MCNP}
+    \begin{itemize}
+      \item Historically has only used a condensed-history approched with mutiple scattering techniques.
+      \item MCNP6 implemented a single-event method for energies below 1 keV, 
+              were the condensed-history method no longer holds.
+    \end{itemize}
+  \end{block}
+    
+  \begin{block}{Penelope}
+    \begin{itemize}
+      \item Implenments a mixed method that simulates soft (condensed-history) 
+              events below a cutoff energy/angle and hard (single-events) above.
+    \end{itemize}    
+  \end{block}
+
+  \begin{block}{Frensie}
+    \begin{itemize}
+      \item Ultimately working towards implementing a mixed method while using 
+              the cross-sectional data from MCNP6 for hard events 
+    \end{itemize}    
+  \end{block}
+    
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Atomic Excitation}
+
+  \begin{itemize}
+    \item There is no angular deflection.
+    \item There are no secondary particles.
+    \item Energy dependent electron energy loss are tabulated in ACE tables.
+    \item No sampling is required for this process.   
+  \end{itemize}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Hard Elastic Scattering}
+  
+  \begin{itemize}
+    \item There is no energy loss.
+    \item There are no secondary particles.
+    \item ACE tables provide histogram CDF of the outgoing angle cosine, \textmu, 
+            for $14-16$ energy groups.
+    \item for $\mu > 0.999999$ an analytical function, $f(\mu)$, is used to 
+            compute the scattering angle
+  \end{itemize}
+
+  \begin{equation*}
+    f(\mu) = \frac{A}{(\eta + 1 - \mu)^2}
+  \end{equation*}
+
+  \begin{equation*}
+    \eta(E,Z) = \frac{1}{4}\left(\frac{\alpha mc}{0.885p}\right)^2 Z^{2/3}[1.13+3.76(\alpha Z/\beta)^2]
+  \end{equation*}
+
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Electroionization}
+  
+  \begin{itemize}
+    \item The subshell is directly sampled.
+    \item A knock-on electron is ejected.
+    \item ACE tables provide CDF of the knock-on energy, $E_{knock}$, based on the incident electron energy.
+    \item The incident electron energy is reduced by the $E_{knock} + E_{binding}$.
+    \item Conservation of momentum is used to find the scattering and ejection angles (need to double check).
+    \item Vacancy will be filled using atomic relaxation data (still need to implement). 
+  \end{itemize}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Electroionization Scattering Angle}
+  \begin{itemize}
+    \item Conservation of Momentum
+  \end{itemize}
+
+  \begin{equation*}
+    (p_{knock}c + p_{a}c)^2 = (pc)^2 + (p'c)^2 - 2pp'cos(\theta)
+  \end{equation*}
+
+  \begin{equation*}
+    (pc)^2 + (p'c)^2 - 2pp'cos(\theta) = (p_{knock}c)^2 =
+              E_{knock}^2 - (m_{knock}c^2)^2
+  \end{equation*}
+
+  \begin{itemize}
+    \item Conservation of Energy
+  \end{itemize}
+
+  \begin{equation*}
+    T + m_ec^2 + M_ac^2 =T' + m_ec^2 + T_a + M'_ac^2 + T_knock + m_ec^2
+  \end{equation*}
+
+  \begin{equation*}
+    T = T' + T_{knock} + E_{binding} = T' + W 
+  \end{equation*}
+
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Bremmstrahlung}
+
+  \begin{itemize}
+    \item A photon is ejected.
+    \item ACE tables provide CDF of the photon energy, $E_{\gamma}$, based on the incident electron energy.
+    \item The incident electron energy is reduced by the $E_{\gamma}$.
+    \item The electron direction is assumed to be essentially unchanged.
+    \item For $1 keV <  E_{\gamma} < 1 GeV$ the direction of the photon is 
+           sampled using a table based scheme from the condensed-history method (still need to implement). 
+    \item For all other energies a analytical function, $p(\mu)$, is used (not 
+           really appropriate for low energies).
+  \end{itemize}
+
+  \begin{equation*}
+    p(\mu)d\mu = \frac{(1-\beta^2)}{2(1-\beta\mu)^2}d\mu
+  \end{equation*}
+
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Conclusion}
+
+  \begin{itemize}
+    \item Once finished Frensie should be capable of forward electron transport below 1 keV.
+    \item The ACE tables has cross-sectional data for energies between 10 eV and 
+            100 GeV, but bin sizes may be too course for used above 1 keV.
+    \item Next step is to implement condensed-history method.
+  \end{itemize}
+
+\end{frame}
+
+\end{document}
