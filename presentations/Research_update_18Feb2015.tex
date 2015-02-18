@@ -7,6 +7,7 @@
 \usepackage{amssymb}
 %% The amsthm package provides extended theorem environments
 \usepackage{amsthm} \usepackage{amsmath}
+%% \usepackage{eqnarray}
 \usepackage[mathcal]{euscript} \usepackage{color}
 \usepackage{textcomp}
 \usepackage{algorithm,algorithmic}
@@ -55,6 +56,27 @@
 \title{Update: Electron Mode in FRENSIE}
 \begin{document}
 \maketitle
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Outline}
+
+  \begin{block}{Electron Mode}
+    \begin{itemize}
+      \item Single Scattering Events from 100 GeV to 10 eV
+      \item Elastic, Bremsstrahlung, Electroionization, Atomic Excitation 
+      \item Secondary particles created, but photons not tracked
+      \item Atomic relaxation implemented
+    \end{itemize}
+  \end{block}
+    
+  \begin{block}{Adjoint Papers}
+    \begin{itemize}
+      \item Hybrid Multigroup/Continuous-Energy Monte Carlo using Boltzmann-Fokker-Planck Equation
+      \item Discrete Scattering Angles and Discrete Energy Losses
+    \end{itemize}    
+  \end{block}  
+
+\end{frame}
 
 %%----------------------------------------------------------------------------%%
 \begin{frame}{Electron Mode}
@@ -117,6 +139,53 @@
     \begin{itemize}
       \item Create testing mode were no secondary particles are created
       \item Implement other options for the bremsstrahlung photon ejection angle
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Hybrid Multigroup/Continuous-Energy Monte Carlo}
+ 
+  \begin{block}{ Boltzmann-Fokker-Planck Equation}
+    \begin{eqnarray*}
+      \Omega \cdot \nabla \psi + \sigma_t\psi &=& \int_{0}^{\infty}\int_{0}^{2\pi}\int_{-1}^{+1} \sigma_s(E'\rightarrow E,\mu_0)
+       \times\psi(\mu',\phi',E')d\mu'd\phi'dE' \\
+       & &+ \frac{\alpha}{2}\Big\{ \frac{\partial}{\partial \mu} \Big[(1-\mu^2)\frac{\partial \psi}{\partial \mu}\Big]+ \frac{1}{1-\mu^2}\frac{\partial^2\psi}{\partial\phi^2}\Big\} + \frac{\partial}{\partial E} [S\psi]+Q
+    \end{eqnarray*}
+   \end{block}
+    
+  \begin{block}{Modify Angular Fokker-Planck Operator}
+    \begin{itemize}
+      \item Replace $~~~~F_{\alpha}\psi=\frac{\alpha}{2}\Big\{ \frac{\partial}{\partial \mu} 
+        \Big[(1-\mu^2)\frac{\partial \psi}{\partial \mu}\Big]+ \frac{1}{1-\mu^2}\frac{\partial^2\psi}{\partial\phi^2}\Big\}$
+      
+      \item With $~~~~B_{\alpha}\psi=\int_{0}^{2\pi}\int_{-1}^{+1} \sigma_a(E,\mu_0)\psi(\mu',\phi',E)d\mu'd\phi' - \sigma_a\psi$
+        
+      \item Where $~~B_{\alpha}\psi = F_{\alpha}\psi~$ in the limit as $~\mu_s \rightarrow 1$
+      \item Assume error from high-order flux moments are small with highly forward-peaked scattering (holds for condensed history where the scale lengths are large compared to mfp)
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Hybrid Multigroup/Continuous-Energy Monte Carlo}
+ 
+  \begin{block}{ Hybrid Multigroup/Continuous-Energy Approximation}
+  
+   Replace the Stopping Power, $S$ with $\tilde S$ \\
+      $$\tilde{S}(E)=\sum_{g=1}^{N}S_gB_g(E)$$
+   Where \\ $~~B_g(E)=1.0$,~~ for $~E \in (E_{g+1/2},E_{g-1/2})$ ~~~else $B_g(E)=0.0$ \\ 
+   $~~S_g$ is the weighted group average of $S(E)$ using Radau quadratures
+
+   \end{block}
+    
+  \begin{block}{Legendre Cross-Section Expansion}
+    \begin{itemize}
+      \item Replace S with \~S  
+      \item Where $~~B_{\alpha}\psi = F_{\alpha}\psi~$ in the limit as $~\mu_s \rightarrow 1$
+      \item Assume error from high-order flux moments are small with highly forward-peaked scattering (holds for condensed history where the scale lengths are large compared to mfp)
     \end{itemize}
   \end{block}
 
