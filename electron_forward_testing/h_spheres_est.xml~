@@ -1,0 +1,33 @@
+<ParameterList name="Estimators">
+
+  <ParameterList name="Flux on sphere surfaces">
+    <Parameter name="Id" type="unsigned int" value="1"/>
+    <Parameter name="Type" type="string" value="surface.flux"/>
+    <Parameter name="Particle Type" type="string" value="Electron"/>
+    <Parameter name="Multiplier" type="double" value="1.0"/>
+    <ParameterList name="Bins">
+      <Parameter name="Energy Bins" type="Array(double)"
+		 value="{1e-6,
+	                 5e-6,
+			 1e-5,
+			 1.5e-5
+			 2.0e-5}"/>
+    </ParameterList>
+  </ParameterList>
+
+  <ParameterList name="Current on sphere surfaces">
+    <Parameter name="Id" type="unsigned int" value="2"/>
+    <Parameter name="Type" type="string" value="surface.current"/>
+    <Parameter name="Particle Type" type="string" value="Electron"/>
+    <Parameter name="Multiplier" type="double" value="1.0"/>
+    <ParameterList name="Bins">
+      <Parameter name="Energy Bins" type="Array(double)"
+		 value="{1e-6,
+	                 5e-6,
+			 1e-5,
+			 1.5e-5
+			 2.0e-5}"/>
+    </ParameterList>
+  </ParameterList>
+
+</ParameterList>
