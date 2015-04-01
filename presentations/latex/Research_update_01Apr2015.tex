@@ -1,0 +1,313 @@
+\documentclass{beamer}
+\usetheme[white]{Wisconsin}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{color}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+\usepackage{amsthm} \usepackage{amsmath}
+%% \usepackage{eqnarray}
+\usepackage[mathcal]{euscript} \usepackage{color}
+\usepackage{textcomp}
+\usepackage{algorithm,algorithmic}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[absolute,overlay]{textpos}
+  \setlength{\TPHorizModule}{1mm}
+  \setlength{\TPVertModule}{1mm}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+  backgroundcolor=\color{lbcolor},
+  tabsize=4,
+  rulecolor=,
+  language=c++,
+  basicstyle=\scriptsize,
+  upquote=true,
+  aboveskip={1.5\baselineskip},
+  columns=fixed,
+  showstringspaces=false,
+  extendedchars=true,
+  breaklines=true,
+  prebreak =
+  \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+  frame=single,
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  identifierstyle=\ttfamily,
+  keywordstyle=\color[rgb]{0,0,1},
+  commentstyle=\color[rgb]{0.133,0.545,0.133},
+  stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+
+%% colors
+\setbeamercolor{boxheadcolor}{fg=white,bg=UWRed}
+\setbeamercolor{boxbodycolor}{fg=black,bg=white}
+
+%%----------------------------------------------------------------------------%%
+\author{Luke J. Kersting
+    \\ NEEP
+    \\ University of Wisconsin - Madison
+    \\ FRENSIE Meeting
+}
+
+\date{\today}
+\title{Update: Electron Mode in FRENSIE}
+\begin{document}
+\maketitle
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Outline}
+
+  \begin{block}{Hybrid Multigroup/Continuous-Energy Monte Carlo using Boltzmann-Fokker-Planck}
+    \begin{itemize}
+      \item Advantages
+      \item Boltzmann-Fokker-Planck Equation (BFP)
+      \item Modifications to BFB
+      \item Solution to Modified BFG
+      \item Monte Carlo Method
+      \item Adjoint
+    \end{itemize}
+  \end{block}
+    
+
+\end{frame}
+
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Advantaged}
+ 
+    \begin{itemize}
+      \item The same basic multigroup cross-section data can be used for forward and adjoint calculations. 
+       
+      \item The adjoint transport model is nearly identical to the forward making implementation easy 
+
+      \item The transport equation is generalized for Monte Carlo transport of neutral and charged particles.\\ They implement for electrons and photons. 
+
+    \end{itemize}
+
+\end{frame}
+
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Boltzmann-Fokker-Planck Equation}
+ 
+    \begin{eqnarray*}
+      \Omega \cdot \nabla \psi + \sigma_t\psi &= & \\
+      & & \int_{0}^{\infty}\int_{0}^{2\pi}\int_{-1}^{+1} \sigma_s(E'\rightarrow E,\mu_0)
+       \times\psi(\mu',\phi',E')d\mu'd\phi'dE' \\
+       & &+ \frac{\alpha}{2}\Big\{ \frac{\partial}{\partial \mu} \Big[(1-\mu^2)\frac{\partial \psi}{\partial \mu}\Big]+ \frac{1}{1-\mu^2}\frac{\partial^2\psi}{\partial\phi^2}\Big\} + \frac{\partial}{\partial E} [S\psi] \\
+       & &+ Q
+    \end{eqnarray*}
+
+     \begin{itemize}
+       \item The Boltzmann Operator treats the large-angled or "smooth" component of the cross-section
+
+      \item The Fokker-Planck Opertor treats the forward-peaked or "singular" component of the cross-section
+       
+     \end{itemize}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Fokker-Planck Operators}
+     
+  \begin{block}{Continuous-Scattering Operator}
+
+    $$F_{\alpha}\psi=\frac{\alpha}{2}\Big\{ \frac{\partial}{\partial \mu} 
+        \Big[(1-\mu^2)\frac{\partial \psi}{\partial \mu}\Big]+ \frac{1}{1-\mu^2}\frac{\partial^2\psi}{\partial\phi^2}\Big\}$$
+      
+    \begin{itemize}
+      \item Constructed so the mean change in angle cosine per path length is equal to the restricted momentum transfer $$ \Delta\mu/\text{path length} = \text{restricted momentum transfer}$$
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Continuous-Slowing Down Operator}
+
+    $$\frac{\partial}{\partial E} [S\psi]$$
+      
+    \begin{itemize}
+      \item Constructed so the mean change in energy per path length is equal to the restricted stopping power $$ \Delta E/\text{path length} = \text{restricted stopping power}$$
+    \end{itemize}
+
+  \end{block}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Approximate Angular Fokker-Planck Operator}
+ 
+     Let:  $$\lim_{ \mu_s \to 1}B_{\alpha}\psi = F_{\alpha}\psi $$
+
+     Where:  $$B_{\alpha}\psi=\int_{0}^{2\pi}\int_{-1}^{+1} \sigma_a(E,\mu_0)\psi(\mu',\phi',E)d\mu'd\phi' - \sigma_a\psi$$
+
+    \begin{itemize}
+      \item Eigenvalues are equal at limit
+
+      \item High-order eigenvalues become more approximate and are underestimated
+
+      \item Error for higher order flux moments can be ignored if they are large compared to temporal and spatial scale lengths
+ 
+      \item  Holds for condensed history where the scale lengths are large compared to mfp
+    \end{itemize}
+
+\end{frame}
+
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Legendre Cross-Section Expansion}
+ 
+Expand the cross-sections using Legendre polynomials
+$$ \hat{\sigma_s}(E'\to E,\mu_o)=\sum_{l=0}^{L} \frac{2l+1}{4\pi}\sigma_s^{(l)}(E'\to E)P_l(\mu_o)$$
+
+Where:
+$$ \sigma_s^{(l)}(E'\to E) = 2\pi\int_{-1}^{+1} \sigma_s(E'\to E),\mu_o)P_l(\mu_o)d\mu_o$$
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Hybrid Multigroup/Continuous-Energy Approximation}
+ 
+  \begin{itemize}
+
+    \item Break energy up into $N$ groups such that for group $g$:
+    $$ E_{g+1/2} < E < E_{g-1/2} $$ 
+    
+    \item Radau quadratures are used to get the weighted least-squares fits in energy for: \\~~The Smooth Component Cross-Sections ($\sigma$)
+\\~~The Restricted Momentum Transfers ($\alpha$)
+\\~~The Restricted Stopping Power ($S$)
+    
+  \end{itemize}
+  
+   Replace the parameter, $f$ with $\tilde f$ \\
+\[
+\tilde{f}(E)=\sum_{g=1}^{N}f_gB_g(E)
+~~~\text{Where}~~~  B_g(E) =
+\begin{cases} 
+1 & E \in (E_{g+1/2},E_{g-1/2}) \\ 
+0 & Otherwise
+\end{cases}
+\] 
+
+   $f_g$ is the weighted group average of $f(E)$ using Radau quadratures
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Multigroup/Continuous Energy BFP Equation}
+ 
+    \begin{eqnarray*}
+      \Omega \cdot \nabla \psi + \tilde{\sigma}_t\psi &= & \\
+      & & \int_{E}^{E_{1/2}}\int_{0}^{2\pi}\int_{-1}^{+1} \tilde{\sigma}_s(E'\rightarrow E,\mu_0)
+       \psi(\mu',\phi',E')d\mu'd\phi'dE' \\
+       & &+ \int_{0}^{2\pi}\int_{-1}^{+1} \tilde{\sigma}_{\alpha}(\mu_o) \psi(\mu',\phi')d\mu'd\phi'  - \tilde{\sigma}_{\alpha}(\mu_o)\psi\\
+       & &+ \frac{\partial}{\partial E} [\tilde{S}\psi] + Q
+    \end{eqnarray*}
+
+     \begin{itemize}
+       \item The Boltzmann Operator reduces to Standard Multigroup method.
+
+      \item Exponential distribution of path lengths (compared fixed path length for condensed history).
+   
+      \item Accuracy depends on:  \# of groups, Order of Legendre expansion, $\mu_s$
+       
+     \end{itemize}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Collision Algorithm: Location and Energy}
+
+Let $E_p$ be the energy of a particle in group $g$
+
+  \begin{itemize}
+    \item The total group cross-section is the sum of the smooth-component Boltzmann and continuous-scattering cross-sections: $$~~~ \sigma_g^{total} = \sigma_{t,g} + \sigma_{\alpha,g} ~~~\text{Where}~~~ \sigma_{\alpha,g}=\frac{\alpha}{1-\mu_s}$$
+
+
+       \item $\sigma_g^{total}$ is used to find the distance to next collision, $D_c$
+
+      \item $D_c$ is compared to the distance to material, $D_m$, and distance to energy, $D_e = \frac{E_p - E_{g+1/2}}{S_g}$
+   
+      \item The new energy is: $$E_p^{new} = E_p^{old} - S_gD_c$$
+       
+     \end{itemize}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Collision Algorithm: Reaction}
+
+Can either have a smooth-component Boltzmann or continuous-scattering reaction with probabilities: $$ P_B=\frac{\sigma_{t,g}}{\sigma_g^{total} }~~~\text{and}~~~
+                     P_{\alpha}=\frac{\sigma_{\alpha,g}}{\sigma_g^{total} }$$
+
+  \begin{itemize}
+    \item If $P_{\alpha}$ is selected a new direction for the particle is randomly sampled based on a polar scattering angle with cosine equal to $\mu_s$.
+    
+    \item  If $P_B$ is selected the particle is removed and $M$ new particle are generated at the collision site.
+
+    \item Multiplication Factor
+   $$ M = \frac{1}{\sigma_g^{total}} \int_{E_{g+1/2}}^{E_{g-1/2}}  \sigma_s^{(0)}(E'\to E)dE'=\frac{1}{\sigma_{t,g}}\sum_{k=g}^{N}\sigma_{s,g\to k}^{(0)}$$
+
+       
+     \end{itemize}
+
+\end{frame}
+
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Collision Algorithm: Reaction (Continued)}
+
+Average M must be preserved
+
+  \begin{itemize}
+    \item Let $M =\text{Integer} + \text{Remainder} = I + R$
+    
+    \item  Create $I$ or $I+1$ particles with probability $1.0-R$ or $R$.
+    
+  \end{itemize}
+
+Energy
+
+  \begin{itemize}
+    \item Particles generated in group $g$ has an energy range of $E_{g+1/2} < E< E_{g-1/2}$
+    
+    \item  Randomly sample energy from a uniform distribution.
+    
+  \end{itemize}
+
+Angle
+
+  \begin{itemize}
+    \item Sample angle based on the discrete Radau distributions.
+    
+    \item  Separate Radau distribution for each smooth-component Boltzmann group-to-group transfer.
+    
+  \end{itemize}
+
+\end{frame}
+
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Adjoint Multigroup/Continuous Energy BFP Equation}
+ 
+    \begin{eqnarray*}
+      -\Omega \cdot \nabla \psi^{\dagger} + \tilde{\sigma}_t\psi^{\dagger} = & \\
+      & \int_{E_{N+1/2}}^{E}\int_{0}^{2\pi}\int_{-1}^{+1} \tilde{\sigma}_s(E\rightarrow E',\mu_0)
+       \psi^{\dagger}({\bf r},\mu',\phi',E')d\mu'd\phi'dE' \\
+       &+ \int_{0}^{2\pi}\int_{-1}^{+1} \tilde{\sigma}_{\alpha}(\mu_o) \psi^{\dagger}(\mu',\phi')d\mu'd\phi'  - \tilde{\sigma}_{\alpha}(\mu_o)\psi^{\dagger}\\
+       &- \frac{\partial}{\partial E} [\tilde{S}\psi^{\dagger}]  + \frac{\partial S}{\partial E} \psi^{\dagger} + Q^{\dagger}
+    \end{eqnarray*}
+
+     \begin{itemize}
+       \item Let the dot product be: $$ [f,h]=\sum_{g=1}^{N}f_gh_g\frac{1}{\Delta E_g} $$
+
+      \item The adjoint cross-section is then: $$ \sigma_{s,k\to g}^{\dagger(l)} = \sigma_{s,g\to k}^{(l)} \frac{\Delta E_g}{\Delta E_k} $$
+       
+     \end{itemize}
+
+\end{frame}
+
+
+
+\end{document}
