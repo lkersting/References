@@ -106,7 +106,7 @@
     \item At energies near the cutoff (10 eV) the reaction cross section is dominated by elastic scattering (by order $10^7$ for H)
     \item It is unlikely the electron will scatter below the cutoff energy 
     \item A temporary fix is to raise the cutoff energy (to 15eV for H) to prevent indefinite elastic scattering
-    \item No mention of this issue in MCNP or Penelope 
+    \item MCNP notes this problem and suggests a minimum cutoff energy of 20eV
   \end{itemize}
 
 \end{frame}
@@ -119,76 +119,26 @@
     \item When the incident electron energy is between two tables a weighted random variable is used to chose the appropriate table
     \item This can result in a $E_{knock}$ that is larger than physically possible
      \item In this case the energy of incident electron is reduce to $1E{-15}$
-    \item MCNP avoids this by interpolation between tables, which is more computationally expensive
+    \item This can be avoided by interpolation between tables, which is more computationally expensive
+     \item MCNP does something similar
   \end{itemize}
 
 
 \end{frame}
 
 %%----------------------------------------------------------------------------%%
-\begin{frame}{Next Step}
-  
-  \begin{block}{Testing}
-    \begin{itemize}
-      \item Run tests in MCNP and FRENSIE for comparison
-      \item Start with Hydrogen spheres
-    \end{itemize}
-  \end{block}
-  
-    \begin{block}{Possible Further Work}
-    \begin{itemize}
-      \item Create testing mode were no secondary particles are created
-      \item Implement other options for the bremsstrahlung photon ejection angle
-    \end{itemize}
-  \end{block}
+\begin{frame}{Differences in Results}
 
-\end{frame}
-
-%%----------------------------------------------------------------------------%%
-\begin{frame}{Hybrid Multigroup/Continuous-Energy Monte Carlo}
+    \begin{itemize}
+     \item Had discrepencies from MCNP caused by knock-on electron ejection angles
  
-  \begin{block}{ Boltzmann-Fokker-Planck Equation}
-    \begin{eqnarray*}
-      \Omega \cdot \nabla \psi + \sigma_t\psi &=& \int_{0}^{\infty}\int_{0}^{2\pi}\int_{-1}^{+1} \sigma_s(E'\rightarrow E,\mu_0)
-       \times\psi(\mu',\phi',E')d\mu'd\phi'dE' \\
-       & &+ \frac{\alpha}{2}\Big\{ \frac{\partial}{\partial \mu} \Big[(1-\mu^2)\frac{\partial \psi}{\partial \mu}\Big]+ \frac{1}{1-\mu^2}\frac{\partial^2\psi}{\partial\phi^2}\Big\} + \frac{\partial}{\partial E} [S\psi]+Q
-    \end{eqnarray*}
-   \end{block}
-    
-  \begin{block}{Modify Angular Fokker-Planck Operator}
-    \begin{itemize}
-      \item Replace $~~~~F_{\alpha}\psi=\frac{\alpha}{2}\Big\{ \frac{\partial}{\partial \mu} 
-        \Big[(1-\mu^2)\frac{\partial \psi}{\partial \mu}\Big]+ \frac{1}{1-\mu^2}\frac{\partial^2\psi}{\partial\phi^2}\Big\}$
-      
-      \item With $~~~~B_{\alpha}\psi=\int_{0}^{2\pi}\int_{-1}^{+1} \sigma_a(E,\mu_0)\psi(\mu',\phi',E)d\mu'd\phi' - \sigma_a\psi$
-        
-      \item Where $~~B_{\alpha}\psi = F_{\alpha}\psi~$ in the limit as $~\mu_s \rightarrow 1$
-      \item Assume error from high-order flux moments are small with highly forward-peaked scattering (holds for condensed history where the scale lengths are large compared to mfp)
-    \end{itemize}
-  \end{block}
+
+
+  \end{itemize}
+
 
 \end{frame}
-
-%%----------------------------------------------------------------------------%%
-\begin{frame}{Hybrid Multigroup/Continuous-Energy Monte Carlo}
- 
-  \begin{block}{ Hybrid Multigroup/Continuous-Energy Approximation}
   
-   Replace the Stopping Power, $S$ with $\tilde S$ \\
-      $$\tilde{S}(E)=\sum_{g=1}^{N}S_gB_g(E)$$
-   Where \\ $~~B_g(E)=1.0$,~~ for $~E \in (E_{g+1/2},E_{g-1/2})$ ~~~else $B_g(E)=0.0$ \\ 
-   $~~S_g$ is the weighted group average of $S(E)$ using Radau quadratures
 
-   \end{block}
-    
-  \begin{block}{Legendre Cross-Section Expansion}
-    \begin{itemize}
-      \item Replace S with \~S  
-      \item Where $~~B_{\alpha}\psi = F_{\alpha}\psi~$ in the limit as $~\mu_s \rightarrow 1$
-      \item Assume error from high-order flux moments are small with highly forward-peaked scattering (holds for condensed history where the scale lengths are large compared to mfp)
-    \end{itemize}
-  \end{block}
-
-\end{frame}
 
 \end{document}
