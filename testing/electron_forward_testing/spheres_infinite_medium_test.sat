@@ -1,0 +1,727 @@
+1900 0 7 0           
+10 Cubit 14.0 17 ACIS 22.0.2 Linux 24 Fri Feb 20 15:14:14 2015 
+1 9.9999999999999995e-07 1e-10 
+body $7 -1 -1 $-1 $8 $-1 $9 T -25.25 -25.25 -25.25 25.25 25.25 25.25 #
+body $10 -1 -1 $-1 $11 $-1 $12 T -25 -25 -25 25 25 25 #
+body $13 -1 -1 $-1 $14 $-1 $15 T -0.0030000000000000001 -0.0030000000000000001 -0.0030000000000000001 0.0030000000000000001 0.0030000000000000001 0.0030000000000000001 #
+body $16 -1 -1 $-1 $17 $-1 $18 T -0.002 -0.002 -0.002 0.002 0.002 0.002 #
+body $19 -1 -1 $-1 $20 $-1 $21 T -0.001 -0.001 -0.001 0.001 0.001 0.001 #
+body $22 -1 -1 $-1 $23 $-1 $24 T -0.00050000000000000001 -0.00050000000000000001 -0.00050000000000000001 0.00050000000000000001 0.00050000000000000001 0.00050000000000000001 #
+body $25 -1 -1 $-1 $26 $-1 $-1 T -0.00025000000000000001 -0.00025000000000000001 -0.00025000000000000001 0.00025000000000000001 0.00025000000000000001 0.00025000000000000001 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $27 $-1 $0 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 1 #
+lump $28 -1 -1 $-1 $-1 $29 $0 T -25.25 -25.25 -25.25 25.25 25.25 25.25 #
+transform $-1 -1 1 0 0 0 1 0 0 0 1 0 0 0 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $30 $-1 $1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 3 #
+lump $31 -1 -1 $-1 $-1 $32 $1 T -25 -25 -25 25 25 25 #
+transform $-1 -1 1 0 0 0 1 0 0 0 1 0 0 0 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $33 $-1 $2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 5 #
+lump $34 -1 -1 $-1 $-1 $35 $2 T -0.0030000000000000001 -0.0030000000000000001 -0.0030000000000000001 0.0030000000000000001 0.0030000000000000001 0.0030000000000000001 #
+transform $-1 -1 1 0 0 0 1 0 0 0 1 0 0 0 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $36 $-1 $3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 7 #
+lump $37 -1 -1 $-1 $-1 $38 $3 T -0.002 -0.002 -0.002 0.002 0.002 0.002 #
+transform $-1 -1 1 0 0 0 1 0 0 0 1 0 0 0 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $39 $-1 $4 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 9 #
+lump $40 -1 -1 $-1 $-1 $41 $4 T -0.001 -0.001 -0.001 0.001 0.001 0.001 #
+transform $-1 -1 1 0 0 0 1 0 0 0 1 0 0 0 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $42 $-1 $5 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 11 #
+lump $43 -1 -1 $-1 $-1 $44 $5 T -0.00050000000000000001 -0.00050000000000000001 -0.00050000000000000001 0.00050000000000000001 0.00050000000000000001 0.00050000000000000001 #
+transform $-1 -1 1 0 0 0 1 0 0 0 1 0 0 0 1 no_rotate no_reflect no_shear #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $45 $-1 $6 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 15 #
+lump $46 -1 -1 $-1 $-1 $47 $6 T -0.00025000000000000001 -0.00025000000000000001 -0.00025000000000000001 0.00025000000000000001 0.00025000000000000001 0.00025000000000000001 #
+simple-snl-attrib $-1 -1 $-1 $7 $0 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 1 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $48 $-1 $8 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 3 #
+shell $-1 -1 -1 $-1 $49 $-1 $50 $-1 $8 T -25.25 -25.25 -25.25 25.25 25.25 25.25 #
+simple-snl-attrib $-1 -1 $-1 $10 $1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 3 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $51 $-1 $11 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 6 #
+shell $-1 -1 -1 $-1 $52 $-1 $53 $-1 $11 T -25 -25 -25 25 25 25 #
+simple-snl-attrib $-1 -1 $-1 $13 $2 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 5 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $54 $-1 $14 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 9 #
+shell $-1 -1 -1 $-1 $55 $-1 $56 $-1 $14 T -0.0030000000000000001 -0.0030000000000000001 -0.0030000000000000001 0.0030000000000000001 0.0030000000000000001 0.0030000000000000001 #
+simple-snl-attrib $-1 -1 $-1 $16 $3 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 7 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $57 $-1 $17 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 12 #
+shell $-1 -1 -1 $-1 $58 $-1 $59 $-1 $17 T -0.002 -0.002 -0.002 0.002 0.002 0.002 #
+simple-snl-attrib $-1 -1 $-1 $19 $4 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 9 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $60 $-1 $20 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 15 #
+shell $-1 -1 -1 $-1 $61 $-1 $62 $-1 $20 T -0.001 -0.001 -0.001 0.001 0.001 0.001 #
+simple-snl-attrib $-1 -1 $-1 $22 $5 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 11 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $63 $-1 $23 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 21 #
+shell $-1 -1 -1 $-1 $64 $-1 $65 $-1 $23 T -0.00050000000000000001 -0.00050000000000000001 -0.00050000000000000001 0.00050000000000000001 0.00050000000000000001 0.00050000000000000001 #
+simple-snl-attrib $-1 -1 $-1 $25 $6 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 15 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $66 $-1 $26 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 22 #
+shell $-1 -1 -1 $-1 $-1 $-1 $67 $-1 $26 T -0.00025000000000000001 -0.00025000000000000001 -0.00025000000000000001 0.00025000000000000001 0.00025000000000000001 0.00025000000000000001 #
+simple-snl-attrib $-1 -1 $68 $28 $8 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 3 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $-1 $-1 $69 $-1 $8 T -25 -25 -25 25 25 25 #
+face $70 -1 -1 $-1 $71 $72 $29 $-1 $73 forward single T -25.25 -25.25 25.25 25.25 25.25 25.25 F #
+simple-snl-attrib $-1 -1 $74 $31 $11 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 6 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $-1 $-1 $75 $-1 $11 T -0.0030000000000000001 -0.0030000000000000001 -0.0030000000000000001 0.0030000000000000001 0.0030000000000000001 0.0030000000000000001 #
+face $76 -1 -1 $-1 $77 $78 $32 $-1 $79 forward single T -25 -25 25 25 25 25 F #
+simple-snl-attrib $-1 -1 $80 $34 $14 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 9 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $-1 $-1 $81 $-1 $14 T -0.002 -0.002 -0.002 0.002 0.002 0.002 #
+face $82 -1 -1 $-1 $-1 $-1 $35 $-1 $83 forward single T -0.0030000000000000001 -0.0030000000000000001 -0.0030000000000000001 0.0030000000000000001 0.0030000000000000001 0.0030000000000000001 F #
+simple-snl-attrib $-1 -1 $84 $37 $17 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 12 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $-1 $-1 $85 $-1 $17 T -0.001 -0.001 -0.001 0.001 0.001 0.001 #
+face $86 -1 -1 $-1 $-1 $-1 $38 $-1 $87 forward single T -0.002 -0.002 -0.002 0.002 0.002 0.002 F #
+simple-snl-attrib $-1 -1 $88 $40 $20 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 15 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $-1 $-1 $89 $-1 $20 T -0.00050000000000000001 -0.00050000000000000001 -0.00050000000000000001 0.00050000000000000001 0.00050000000000000001 0.00050000000000000001 #
+face $90 -1 -1 $-1 $-1 $-1 $41 $-1 $91 forward single T -0.001 -0.001 -0.001 0.001 0.001 0.001 F #
+simple-snl-attrib $-1 -1 $92 $43 $23 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 21 -2147483648 -1 #
+shell $-1 -1 -1 $-1 $-1 $-1 $93 $-1 $23 T -0.00025000000000000001 -0.00025000000000000001 -0.00025000000000000001 0.00025000000000000001 0.00025000000000000001 0.00025000000000000001 #
+face $94 -1 -1 $-1 $-1 $-1 $44 $-1 $95 forward single T -0.00050000000000000001 -0.00050000000000000001 -0.00050000000000000001 0.00050000000000000001 0.00050000000000000001 0.00050000000000000001 F #
+simple-snl-attrib $-1 -1 $96 $46 $26 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 22 -2147483648 -1 #
+face $97 -1 -1 $-1 $-1 $-1 $47 $-1 $98 forward single T -0.00025000000000000001 -0.00025000000000000001 -0.00025000000000000001 0.00025000000000000001 0.00025000000000000001 0.00025000000000000001 F #
+simple-snl-attrib $-1 -1 $99 $48 $8 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @5 GROUP @16 termination.cell 0 7 1 8 1248954176 0 0 0 0 #
+face $100 -1 -1 $-1 $101 $102 $49 $-1 $103 reversed single T -25 -25 25 25 25 25 F #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $104 $-1 $50 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 1 #
+face $105 -1 -1 $-1 $106 $107 $29 $-1 $108 reversed single T -25.25 -25.25 -25.25 25.25 25.25 -25.25 F #
+loop $-1 -1 -1 $-1 $-1 $109 $50 T -25.25 -25.25 25.25 25.25 25.25 25.25 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 25.25 0 0 1 1 0 0 forward_v I I I I #
+simple-snl-attrib $-1 -1 $-1 $51 $11 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @5 GROUP @14 mat_1_rho_0.01 0 7 1 9 2100286202 0 0 0 0 #
+face $110 -1 -1 $-1 $-1 $-1 $52 $-1 $111 reversed single T -0.0030000000000000001 -0.0030000000000000001 -0.0030000000000000001 0.0030000000000000001 0.0030000000000000001 0.0030000000000000001 F #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $112 $-1 $53 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 13 #
+face $113 -1 -1 $-1 $114 $115 $32 $-1 $116 reversed single T -25 -25 -25 25 25 -25 F #
+loop $-1 -1 -1 $-1 $-1 $117 $53 T -25 -25 25 25 25 25 periphery $79 F #
+plane-surface $-1 -1 -1 $-1 0 0 25 0 0 1 1 0 0 forward_v I I I I #
+simple-snl-attrib $-1 -1 $-1 $54 $14 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @5 GROUP @14 mat_1_rho_0.01 0 7 1 9 2100286202 1 0 0 0 #
+face $118 -1 -1 $-1 $-1 $-1 $55 $-1 $119 reversed single T -0.002 -0.002 -0.002 0.002 0.002 0.002 F #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $120 $-1 $56 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 26 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 0.0030000000000000001 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $-1 $57 $17 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @5 GROUP @14 mat_1_rho_0.01 0 7 1 9 2100286202 2 0 0 0 #
+face $121 -1 -1 $-1 $-1 $-1 $58 $-1 $122 reversed single T -0.001 -0.001 -0.001 0.001 0.001 0.001 F #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $123 $-1 $59 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 29 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 0.002 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $-1 $60 $20 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @5 GROUP @14 mat_1_rho_0.01 0 7 1 9 2100286202 3 0 0 0 #
+face $124 -1 -1 $-1 $-1 $-1 $61 $-1 $125 reversed single T -0.00050000000000000001 -0.00050000000000000001 -0.00050000000000000001 0.00050000000000000001 0.00050000000000000001 0.00050000000000000001 F #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $126 $-1 $62 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 32 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 0.001 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $-1 $63 $23 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @5 GROUP @14 mat_1_rho_0.01 0 7 1 9 2100286202 4 0 0 0 #
+face $127 -1 -1 $-1 $-1 $-1 $64 $-1 $128 reversed single T -0.00025000000000000001 -0.00025000000000000001 -0.00025000000000000001 0.00025000000000000001 0.00025000000000000001 0.00025000000000000001 F #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $129 $-1 $65 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 35 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 0.00050000000000000001 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $-1 $66 $26 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 2 @5 GROUP @14 mat_1_rho_0.01 0 7 1 9 2100286202 5 0 0 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $130 $-1 $67 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 40 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 0.00025000000000000001 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $-1 $68 $8 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $131 $-1 $69 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 13 #
+face $132 -1 -1 $-1 $133 $134 $49 $-1 $135 forward single T -25 -25 -25 25 25 -25 F #
+loop $-1 -1 -1 $-1 $-1 $136 $69 T -25 -25 25 25 25 25 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 25 0 0 1 1 0 0 forward_v I I I I #
+simple-snl-attrib $-1 -1 $137 $70 $50 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 1 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $138 $-1 $71 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 2 #
+face $139 -1 -1 $-1 $140 $141 $29 $-1 $142 reversed single T -25.25 -25.25 -25.25 25.25 -25.25 25.25 F #
+loop $-1 -1 -1 $-1 $-1 $143 $71 T -25.25 -25.25 -25.25 25.25 25.25 -25.25 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 -25.25 0 0 1 1 0 0 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $144 $145 $146 $147 forward $72 $-1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $148 $-1 $75 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 26 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 0.0030000000000000001 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $149 $76 $53 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1558951894 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $150 $-1 $77 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 14 #
+face $151 -1 -1 $-1 $152 $153 $32 $-1 $154 reversed single T -25 -25 -25 25 -25 25 F #
+loop $-1 -1 -1 $-1 $-1 $155 $77 T -25 -25 -25 25 25 -25 periphery $116 T #
+plane-surface $-1 -1 -1 $-1 0 0 -25 0 0 1 1 0 0 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $156 $157 $158 $159 forward $78 $-1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $160 $-1 $81 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 29 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 0.002 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $161 $82 $56 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1572847499 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $162 $-1 $85 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 32 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 0.001 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $163 $86 $59 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1639640171 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $164 $-1 $89 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 35 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 0.00050000000000000001 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $165 $90 $62 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 992942103 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $166 $-1 $93 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 40 #
+sphere-surface $-1 -1 -1 $-1 0 0 0 0.00025000000000000001 1 0 0 0 0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $167 $94 $65 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 279881974 #
+simple-snl-attrib $-1 -1 $168 $97 $67 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 954548506 #
+simple-snl-attrib $-1 -1 $169 $100 $69 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1558951894 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $170 $-1 $101 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 14 #
+face $171 -1 -1 $-1 $172 $173 $49 $-1 $174 forward single T -25 -25 -25 25 -25 25 F #
+loop $-1 -1 -1 $-1 $-1 $175 $101 T -25 -25 -25 25 25 -25 unknown #
+plane-surface $-1 -1 -1 $-1 0 0 -25 0 0 1 1 0 0 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $176 $177 $178 $179 reversed $102 $-1 #
+simple-snl-attrib $-1 -1 $-1 $104 $50 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $180 $105 $71 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 2 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $181 $-1 $106 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 3 #
+face $182 -1 -1 $-1 $183 $184 $29 $-1 $185 reversed single T -25.25 -25.25 -25.25 -25.25 25.25 25.25 F #
+loop $-1 -1 -1 $-1 $-1 $186 $106 T -25.25 -25.25 -25.25 25.25 -25.25 25.25 unknown #
+plane-surface $-1 -1 -1 $-1 0 -25.25 0 0 1 -0 -0 0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $187 $188 $189 $190 forward $107 $-1 #
+coedge $-1 -1 -1 $-1 $191 $109 $192 $193 forward $72 $-1 #
+coedge $-1 -1 -1 $-1 $109 $191 $194 $195 forward $72 $-1 #
+coedge $-1 -1 -1 $-1 $196 $197 $109 $147 reversed $198 $-1 #
+edge $199 -1 -1 $-1 $200 -25.25 $201 25.25 $146 $202 forward @7 unknown T 25.25 -25.25 25.25 25.25 25.25 25.25 #
+simple-snl-attrib $-1 -1 $203 $110 $75 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1572847499 #
+simple-snl-attrib $-1 -1 $204 $112 $53 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 13 1932973639 1 #
+simple-snl-attrib $-1 -1 $205 $113 $77 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1305273289 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $206 $-1 $114 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 15 #
+face $207 -1 -1 $-1 $208 $209 $32 $-1 $210 reversed single T -25 -25 -25 -25 25 25 F #
+loop $-1 -1 -1 $-1 $-1 $211 $114 T -25 -25 -25 25 -25 25 periphery $154 T #
+plane-surface $-1 -1 -1 $-1 0 -25 0 0 1 -0 -0 0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $212 $213 $214 $215 forward $115 $-1 #
+coedge $-1 -1 -1 $-1 $216 $117 $217 $218 forward $78 $-1 #
+coedge $-1 -1 -1 $-1 $117 $216 $219 $220 forward $78 $-1 #
+coedge $-1 -1 -1 $-1 $221 $222 $117 $159 reversed $223 $-1 #
+edge $224 -1 -1 $-1 $225 -25 $226 25 $158 $227 forward @7 unknown T 25 -25 25 25 25 25 #
+simple-snl-attrib $-1 -1 $228 $118 $81 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1639640171 #
+simple-snl-attrib $-1 -1 $229 $120 $56 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 26 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $230 $121 $85 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 992942103 #
+simple-snl-attrib $-1 -1 $231 $123 $59 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 29 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $232 $124 $89 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 279881974 #
+simple-snl-attrib $-1 -1 $233 $126 $62 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 32 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $234 $127 $93 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 954548506 #
+simple-snl-attrib $-1 -1 $235 $129 $65 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 35 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $236 $130 $67 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 40 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $237 $131 $69 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 13 1932973639 1 #
+simple-snl-attrib $-1 -1 $238 $132 $101 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1305273289 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $239 $-1 $133 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 15 #
+face $240 -1 -1 $-1 $241 $242 $49 $-1 $243 forward single T -25 -25 -25 -25 25 25 F #
+loop $-1 -1 -1 $-1 $-1 $244 $133 T -25 -25 -25 25 -25 25 unknown #
+plane-surface $-1 -1 -1 $-1 0 -25 0 0 1 -0 -0 0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $245 $246 $247 $248 reversed $134 $-1 #
+coedge $-1 -1 -1 $-1 $249 $136 $250 $251 reversed $102 $-1 #
+coedge $-1 -1 -1 $-1 $136 $249 $252 $253 reversed $102 $-1 #
+coedge $-1 -1 -1 $-1 $254 $255 $136 $179 forward $256 $-1 #
+edge $257 -1 -1 $-1 $258 -25 $259 25 $178 $260 forward @7 unknown T 25 -25 25 25 25 25 #
+simple-snl-attrib $-1 -1 $-1 $138 $71 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $261 $139 $106 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 3 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $262 $-1 $140 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 4 #
+face $263 -1 -1 $-1 $264 $265 $29 $-1 $266 reversed single T -25.25 25.25 -25.25 25.25 25.25 25.25 F #
+loop $-1 -1 -1 $-1 $-1 $267 $140 T -25.25 -25.25 -25.25 -25.25 25.25 25.25 unknown #
+plane-surface $-1 -1 -1 $-1 -25.25 0 0 1 0 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $268 $194 $269 $270 forward $141 $-1 #
+coedge $-1 -1 -1 $-1 $271 $143 $268 $272 forward $107 $-1 #
+coedge $-1 -1 -1 $-1 $143 $271 $273 $274 forward $107 $-1 #
+coedge $-1 -1 -1 $-1 $197 $196 $143 $190 reversed $198 $-1 #
+edge $275 -1 -1 $-1 $276 -25.25 $277 25.25 $189 $278 forward @7 unknown T 25.25 -25.25 -25.25 25.25 25.25 -25.25 #
+coedge $-1 -1 -1 $-1 $145 $144 $279 $280 forward $72 $-1 #
+coedge $-1 -1 -1 $-1 $281 $282 $144 $193 reversed $265 $-1 #
+edge $283 -1 -1 $-1 $201 -25.25 $284 25.25 $192 $285 forward @7 unknown T -25.25 25.25 25.25 25.25 25.25 25.25 #
+coedge $-1 -1 -1 $-1 $186 $286 $145 $195 reversed $141 $-1 #
+edge $287 -1 -1 $-1 $288 -25.25 $200 25.25 $194 $289 forward @7 unknown T -25.25 -25.25 25.25 25.25 -25.25 25.25 #
+coedge $-1 -1 -1 $-1 $189 $146 $286 $290 forward $198 $-1 #
+coedge $-1 -1 -1 $-1 $146 $189 $281 $291 reversed $198 $-1 #
+loop $-1 -1 -1 $-1 $-1 $196 $264 T 25.25 -25.25 -25.25 25.25 25.25 25.25 unknown #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $292 $-1 $147 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 1 #
+vertex $293 -1 -1 $-1 $147 $294 #
+vertex $295 -1 -1 $-1 $147 $296 #
+straight-curve $-1 -1 -1 $-1 25.25 0 25.25 0 1 0 I I #
+simple-snl-attrib $-1 -1 $297 $148 $75 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 26 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $298 $149 $53 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1558951894 -1 19 0 #
+simple-snl-attrib $-1 -1 $299 $150 $77 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 14 1550456162 1 #
+simple-snl-attrib $-1 -1 $300 $151 $114 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1976405189 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $301 $-1 $152 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 16 #
+face $302 -1 -1 $-1 $303 $304 $32 $-1 $305 reversed single T -25 25 -25 25 25 25 F #
+loop $-1 -1 -1 $-1 $-1 $306 $152 T -25 -25 -25 -25 25 25 periphery $210 T #
+plane-surface $-1 -1 -1 $-1 -25 0 0 1 0 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $307 $219 $308 $309 forward $153 $-1 #
+coedge $-1 -1 -1 $-1 $310 $155 $307 $311 forward $115 $-1 #
+coedge $-1 -1 -1 $-1 $155 $310 $312 $313 forward $115 $-1 #
+coedge $-1 -1 -1 $-1 $222 $221 $155 $215 reversed $223 $-1 #
+edge $314 -1 -1 $-1 $315 -25 $316 25 $214 $317 forward @7 unknown T 25 -25 -25 25 25 -25 #
+coedge $-1 -1 -1 $-1 $157 $156 $318 $319 forward $78 $-1 #
+coedge $-1 -1 -1 $-1 $320 $321 $156 $218 reversed $304 $-1 #
+edge $322 -1 -1 $-1 $226 -25 $323 25 $217 $324 forward @7 unknown T -25 25 25 25 25 25 #
+coedge $-1 -1 -1 $-1 $211 $325 $157 $220 reversed $153 $-1 #
+edge $326 -1 -1 $-1 $327 -25 $225 25 $219 $328 forward @7 unknown T -25 -25 25 25 -25 25 #
+coedge $-1 -1 -1 $-1 $214 $158 $325 $329 forward $223 $-1 #
+coedge $-1 -1 -1 $-1 $158 $214 $320 $330 reversed $223 $-1 #
+loop $-1 -1 -1 $-1 $-1 $221 $303 T 25 -25 -25 25 25 25 periphery $331 T #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $332 $-1 $159 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 25 #
+vertex $333 -1 -1 $-1 $159 $334 #
+vertex $335 -1 -1 $-1 $159 $336 #
+straight-curve $-1 -1 -1 $-1 25 0 25 0 1 0 I I #
+simple-snl-attrib $-1 -1 $337 $160 $81 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 29 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $338 $161 $56 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 3 @5 GROUP @26 estimator_1.surface.flux.e @29 estimator_2.surface.current.e 0 11 2 10 11 21733705 1278329737 0 0 0 0 0 0 #
+simple-snl-attrib $-1 -1 $339 $162 $85 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 32 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $340 $163 $59 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 3 @5 GROUP @26 estimator_1.surface.flux.e @29 estimator_2.surface.current.e 0 11 2 10 11 21733705 1278329737 1 1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $341 $164 $89 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 35 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $342 $165 $62 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 3 @5 GROUP @26 estimator_1.surface.flux.e @29 estimator_2.surface.current.e 0 11 2 10 11 21733705 1278329737 2 2 0 0 0 0 #
+simple-snl-attrib $-1 -1 $343 $166 $93 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 40 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $344 $167 $65 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 3 @5 GROUP @26 estimator_1.surface.flux.e @29 estimator_2.surface.current.e 0 11 2 10 11 21733705 1278329737 3 3 0 0 0 0 #
+simple-snl-attrib $-1 -1 $345 $168 $67 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 3 @5 GROUP @26 estimator_1.surface.flux.e @29 estimator_2.surface.current.e 0 11 2 10 11 21733705 1278329737 4 4 0 0 0 0 #
+simple-snl-attrib $-1 -1 $346 $169 $69 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1558951894 1 7 1 #
+simple-snl-attrib $-1 -1 $347 $170 $101 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 14 1550456162 1 #
+simple-snl-attrib $-1 -1 $348 $171 $133 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1976405189 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $349 $-1 $172 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 16 #
+face $350 -1 -1 $-1 $351 $352 $49 $-1 $353 forward single T -25 25 -25 25 25 25 F #
+loop $-1 -1 -1 $-1 $-1 $354 $172 T -25 -25 -25 -25 25 25 unknown #
+plane-surface $-1 -1 -1 $-1 -25 0 0 1 0 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $250 $355 $356 $357 reversed $173 $-1 #
+coedge $-1 -1 -1 $-1 $358 $175 $359 $360 reversed $134 $-1 #
+coedge $-1 -1 -1 $-1 $175 $358 $355 $361 reversed $134 $-1 #
+coedge $-1 -1 -1 $-1 $255 $254 $175 $248 forward $256 $-1 #
+edge $362 -1 -1 $-1 $363 -25 $364 25 $247 $365 forward @7 unknown T 25 -25 -25 25 25 -25 #
+coedge $-1 -1 -1 $-1 $177 $176 $366 $367 reversed $102 $-1 #
+coedge $-1 -1 -1 $-1 $368 $244 $176 $251 forward $173 $-1 #
+edge $369 -1 -1 $-1 $370 -25 $258 25 $250 $371 forward @7 unknown T -25 -25 25 25 -25 25 #
+coedge $-1 -1 -1 $-1 $372 $373 $177 $253 forward $352 $-1 #
+edge $374 -1 -1 $-1 $259 -25 $375 25 $252 $376 forward @7 unknown T -25 25 25 25 25 25 #
+coedge $-1 -1 -1 $-1 $247 $178 $373 $377 forward $256 $-1 #
+coedge $-1 -1 -1 $-1 $178 $247 $368 $378 reversed $256 $-1 #
+loop $-1 -1 -1 $-1 $-1 $255 $351 T 25 -25 -25 25 25 25 unknown #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $379 $-1 $179 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 25 #
+vertex $380 -1 -1 $-1 $179 $381 #
+vertex $382 -1 -1 $-1 $179 $383 #
+straight-curve $-1 -1 -1 $-1 25 0 25 0 1 0 I I #
+simple-snl-attrib $-1 -1 $-1 $181 $106 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $384 $182 $140 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 4 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $385 $-1 $183 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 5 #
+face $386 -1 -1 $-1 $-1 $198 $29 $-1 $387 reversed single T 25.25 -25.25 -25.25 25.25 25.25 25.25 F #
+loop $-1 -1 -1 $-1 $-1 $281 $183 T -25.25 25.25 -25.25 25.25 25.25 25.25 unknown #
+plane-surface $-1 -1 -1 $-1 0 25.25 0 0 -1 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $388 $279 $282 $389 forward $184 $-1 #
+coedge $-1 -1 -1 $-1 $286 $186 $187 $272 reversed $141 $-1 #
+coedge $-1 -1 -1 $-1 $279 $388 $186 $270 reversed $184 $-1 #
+edge $390 -1 -1 $-1 $288 -25.25 $391 25.25 $269 $392 forward @7 unknown T -25.25 -25.25 -25.25 -25.25 -25.25 25.25 #
+coedge $-1 -1 -1 $-1 $188 $187 $388 $393 forward $107 $-1 #
+edge $394 -1 -1 $-1 $277 -25.25 $391 25.25 $268 $395 forward @7 unknown T -25.25 -25.25 -25.25 25.25 -25.25 -25.25 #
+coedge $-1 -1 -1 $-1 $282 $281 $188 $274 reversed $265 $-1 #
+edge $396 -1 -1 $-1 $397 -25.25 $276 25.25 $273 $398 forward @7 unknown T -25.25 25.25 -25.25 25.25 25.25 -25.25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $399 $-1 $190 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 5 #
+vertex $400 -1 -1 $-1 $190 $401 #
+vertex $402 -1 -1 $-1 $290 $403 #
+straight-curve $-1 -1 -1 $-1 25.25 0 -25.25 0 -1 0 I I #
+coedge $-1 -1 -1 $-1 $267 $269 $191 $280 reversed $184 $-1 #
+edge $404 -1 -1 $-1 $284 -25.25 $288 25.25 $279 $405 forward @7 unknown T -25.25 -25.25 25.25 -25.25 25.25 25.25 #
+coedge $-1 -1 -1 $-1 $273 $192 $197 $291 forward $265 $-1 #
+coedge $-1 -1 -1 $-1 $192 $273 $267 $389 reversed $265 $-1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $406 $-1 $193 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 2 #
+vertex $407 -1 -1 $-1 $193 $408 #
+straight-curve $-1 -1 -1 $-1 0 25.25 25.25 -1 0 0 I I #
+coedge $-1 -1 -1 $-1 $194 $268 $196 $290 reversed $141 $-1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $409 $-1 $195 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 4 #
+vertex $410 -1 -1 $-1 $280 $411 #
+straight-curve $-1 -1 -1 $-1 0 -25.25 25.25 1 0 0 I I #
+edge $412 -1 -1 $-1 $200 -25.25 $277 25.25 $196 $413 forward @7 unknown T 25.25 -25.25 -25.25 25.25 -25.25 25.25 #
+edge $414 -1 -1 $-1 $201 -25.25 $276 25.25 $197 $415 forward @7 unknown T 25.25 25.25 -25.25 25.25 25.25 25.25 #
+simple-snl-attrib $-1 -1 $416 $199 $147 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 1 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $417 $-1 $200 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 1 #
+point $-1 -1 -1 $-1 25.25 -25.25 25.25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $418 $-1 $201 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 2 #
+point $-1 -1 -1 $-1 25.25 25.25 25.25 #
+simple-snl-attrib $-1 -1 $419 $203 $75 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 3 @5 GROUP @26 estimator_1.surface.flux.e @29 estimator_2.surface.current.e 0 11 2 10 11 21733705 1278329737 0 0 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $204 $53 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $420 $205 $77 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1305273289 -1 20 0 #
+simple-snl-attrib $-1 -1 $421 $206 $114 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 15 1932973639 0 #
+simple-snl-attrib $-1 -1 $422 $207 $152 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1774576696 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $423 $-1 $208 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 17 #
+face $424 -1 -1 $-1 $-1 $223 $32 $-1 $331 reversed single T 25 -25 -25 25 25 25 F #
+loop $-1 -1 -1 $-1 $-1 $320 $208 T -25 25 -25 25 25 25 periphery $305 T #
+plane-surface $-1 -1 -1 $-1 0 25 0 0 -1 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $425 $318 $321 $426 forward $209 $-1 #
+coedge $-1 -1 -1 $-1 $325 $211 $212 $311 reversed $153 $-1 #
+coedge $-1 -1 -1 $-1 $318 $425 $211 $309 reversed $209 $-1 #
+edge $427 -1 -1 $-1 $327 -25 $428 25 $308 $429 forward @7 unknown T -25 -25 -25 -25 -25 25 #
+coedge $-1 -1 -1 $-1 $213 $212 $425 $430 forward $115 $-1 #
+edge $431 -1 -1 $-1 $316 -25 $428 25 $307 $432 forward @7 unknown T -25 -25 -25 25 -25 -25 #
+coedge $-1 -1 -1 $-1 $321 $320 $213 $313 reversed $304 $-1 #
+edge $433 -1 -1 $-1 $434 -25 $315 25 $312 $435 forward @7 unknown T -25 25 -25 25 25 -25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $436 $-1 $215 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 29 #
+vertex $437 -1 -1 $-1 $215 $438 #
+vertex $439 -1 -1 $-1 $329 $440 #
+straight-curve $-1 -1 -1 $-1 25 0 -25 0 -1 0 I I #
+coedge $-1 -1 -1 $-1 $306 $308 $216 $319 reversed $209 $-1 #
+edge $441 -1 -1 $-1 $323 -25 $327 25 $318 $442 forward @7 unknown T -25 -25 25 -25 25 25 #
+coedge $-1 -1 -1 $-1 $312 $217 $222 $330 forward $304 $-1 #
+coedge $-1 -1 -1 $-1 $217 $312 $306 $426 reversed $304 $-1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $443 $-1 $218 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 28 #
+vertex $444 -1 -1 $-1 $218 $445 #
+straight-curve $-1 -1 -1 $-1 0 25 25 -1 0 0 I I #
+coedge $-1 -1 -1 $-1 $219 $307 $221 $329 reversed $153 $-1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $446 $-1 $220 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 26 #
+vertex $447 -1 -1 $-1 $319 $448 #
+straight-curve $-1 -1 -1 $-1 0 -25 25 1 0 0 I I #
+edge $449 -1 -1 $-1 $225 -25 $316 25 $221 $450 forward @7 unknown T 25 -25 -25 25 -25 25 #
+edge $451 -1 -1 $-1 $226 -25 $315 25 $222 $452 forward @7 unknown T 25 25 -25 25 25 25 #
+plane-surface $-1 -1 -1 $-1 25 0 0 -1 0 0 0 -0 1 forward_v I I I I #
+simple-snl-attrib $-1 -1 $453 $224 $159 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 31724905 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $454 $-1 $225 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 17 #
+point $-1 -1 -1 $-1 25 -25 25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $455 $-1 $226 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 18 #
+point $-1 -1 -1 $-1 25 25 25 #
+simple-snl-attrib $-1 -1 $456 $228 $81 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 3 @5 GROUP @26 estimator_1.surface.flux.e @29 estimator_2.surface.current.e 0 11 2 10 11 21733705 1278329737 1 1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $229 $56 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1572847499 -1 27 0 #
+simple-snl-attrib $-1 -1 $457 $230 $85 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 3 @5 GROUP @26 estimator_1.surface.flux.e @29 estimator_2.surface.current.e 0 11 2 10 11 21733705 1278329737 2 2 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $231 $59 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1639640171 -1 30 0 #
+simple-snl-attrib $-1 -1 $458 $232 $89 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 3 @5 GROUP @26 estimator_1.surface.flux.e @29 estimator_2.surface.current.e 0 11 2 10 11 21733705 1278329737 3 3 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $233 $62 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 992942103 -1 33 0 #
+simple-snl-attrib $-1 -1 $459 $234 $93 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 3 @5 GROUP @26 estimator_1.surface.flux.e @29 estimator_2.surface.current.e 0 11 2 10 11 21733705 1278329737 4 4 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $235 $65 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 279881974 -1 36 0 #
+simple-snl-attrib $-1 -1 $-1 $236 $67 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 954548506 -1 41 0 #
+simple-snl-attrib $-1 -1 $-1 $237 $69 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $460 $238 $101 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1305273289 1 14 1 #
+simple-snl-attrib $-1 -1 $461 $239 $133 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 15 1932973639 0 #
+simple-snl-attrib $-1 -1 $462 $240 $172 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1774576696 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $463 $-1 $241 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 17 #
+face $464 -1 -1 $-1 $-1 $256 $49 $-1 $465 forward single T 25 -25 -25 25 25 25 F #
+loop $-1 -1 -1 $-1 $-1 $373 $241 T -25 25 -25 25 25 25 unknown #
+plane-surface $-1 -1 -1 $-1 0 25 0 0 -1 0 0 0 -1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $366 $466 $372 $467 reversed $242 $-1 #
+coedge $-1 -1 -1 $-1 $244 $368 $246 $361 forward $173 $-1 #
+coedge $-1 -1 -1 $-1 $466 $366 $244 $357 forward $242 $-1 #
+edge $468 -1 -1 $-1 $370 -25 $469 25 $356 $470 forward @7 unknown T -25 -25 -25 -25 -25 25 #
+coedge $-1 -1 -1 $-1 $246 $245 $466 $471 reversed $134 $-1 #
+coedge $-1 -1 -1 $-1 $373 $372 $245 $360 forward $352 $-1 #
+edge $472 -1 -1 $-1 $473 -25 $363 25 $359 $474 forward @7 unknown T -25 25 -25 25 25 -25 #
+edge $475 -1 -1 $-1 $364 -25 $469 25 $355 $476 forward @7 unknown T -25 -25 -25 25 -25 -25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $477 $-1 $248 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 29 #
+vertex $478 -1 -1 $-1 $248 $479 #
+vertex $480 -1 -1 $-1 $378 $481 #
+straight-curve $-1 -1 -1 $-1 25 0 -25 0 -1 0 I I #
+coedge $-1 -1 -1 $-1 $356 $354 $249 $367 forward $242 $-1 #
+edge $482 -1 -1 $-1 $375 -25 $370 25 $366 $483 forward @7 unknown T -25 -25 25 -25 25 25 #
+coedge $-1 -1 -1 $-1 $355 $250 $255 $378 forward $173 $-1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $484 $-1 $251 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 26 #
+vertex $485 -1 -1 $-1 $367 $486 #
+straight-curve $-1 -1 -1 $-1 0 -25 25 1 0 0 I I #
+coedge $-1 -1 -1 $-1 $359 $252 $354 $467 forward $352 $-1 #
+coedge $-1 -1 -1 $-1 $252 $359 $254 $377 reversed $352 $-1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $487 $-1 $253 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 28 #
+vertex $488 -1 -1 $-1 $253 $489 #
+straight-curve $-1 -1 -1 $-1 0 25 25 -1 0 0 I I #
+edge $490 -1 -1 $-1 $259 -25 $363 25 $254 $491 forward @7 unknown T 25 25 -25 25 25 25 #
+edge $492 -1 -1 $-1 $258 -25 $364 25 $255 $493 forward @7 unknown T 25 -25 -25 25 -25 25 #
+simple-snl-attrib $-1 -1 $494 $257 $179 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 31724905 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $495 $-1 $258 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 17 #
+point $-1 -1 -1 $-1 25 -25 25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $496 $-1 $259 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 18 #
+point $-1 -1 -1 $-1 25 25 25 #
+simple-snl-attrib $-1 -1 $-1 $262 $140 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $497 $263 $183 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 5 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $498 $-1 $264 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 6 #
+plane-surface $-1 -1 -1 $-1 25.25 0 0 -1 0 0 0 -0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $269 $267 $271 $393 reversed $184 $-1 #
+edge $499 -1 -1 $-1 $284 -25.25 $397 25.25 $282 $500 forward @7 unknown T -25.25 25.25 -25.25 -25.25 25.25 25.25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $501 $-1 $270 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 9 #
+vertex $502 -1 -1 $-1 $393 $503 #
+straight-curve $-1 -1 -1 $-1 -25.25 -25.25 0 0 0 -1 I I #
+edge $504 -1 -1 $-1 $391 -25.25 $397 25.25 $388 $505 forward @7 unknown T -25.25 -25.25 -25.25 -25.25 25.25 -25.25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $506 $-1 $272 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 6 #
+straight-curve $-1 -1 -1 $-1 0 -25.25 -25.25 -1 0 0 I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $507 $-1 $274 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 8 #
+vertex $508 -1 -1 $-1 $274 $509 #
+straight-curve $-1 -1 -1 $-1 0 25.25 -25.25 1 0 0 I I #
+simple-snl-attrib $-1 -1 $510 $275 $190 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 5 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $511 $-1 $276 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 5 #
+point $-1 -1 -1 $-1 25.25 25.25 -25.25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $512 $-1 $277 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 6 #
+point $-1 -1 -1 $-1 25.25 -25.25 -25.25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $513 $-1 $280 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 3 #
+straight-curve $-1 -1 -1 $-1 -25.25 0 25.25 0 -1 0 I I #
+simple-snl-attrib $-1 -1 $514 $283 $193 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 2 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $515 $-1 $284 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 3 #
+point $-1 -1 -1 $-1 -25.25 25.25 25.25 #
+simple-snl-attrib $-1 -1 $516 $287 $195 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 4 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $517 $-1 $288 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 4 #
+point $-1 -1 -1 $-1 -25.25 -25.25 25.25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $518 $-1 $290 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 10 #
+straight-curve $-1 -1 -1 $-1 25.25 -25.25 0 0 0 -1 I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $519 $-1 $291 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 12 #
+straight-curve $-1 -1 -1 $-1 25.25 25.25 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $-1 $292 $147 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $520 $293 $200 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 1 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $521 $295 $201 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 2 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $297 $75 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1572847499 1 19 1 #
+simple-snl-attrib $-1 -1 $-1 $299 $77 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $522 $300 $114 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1976405189 -1 21 0 #
+simple-snl-attrib $-1 -1 $523 $301 $152 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 16 1548585906 0 #
+simple-snl-attrib $-1 -1 $524 $302 $208 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 47365343 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $525 $-1 $303 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 18 #
+coedge $-1 -1 -1 $-1 $308 $306 $310 $430 reversed $209 $-1 #
+edge $526 -1 -1 $-1 $323 -25 $434 25 $321 $527 forward @7 unknown T -25 25 -25 -25 25 25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $528 $-1 $309 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 33 #
+vertex $529 -1 -1 $-1 $430 $530 #
+straight-curve $-1 -1 -1 $-1 -25 -25 0 0 0 -1 I I #
+edge $531 -1 -1 $-1 $428 -25 $434 25 $425 $532 forward @7 unknown T -25 -25 -25 -25 25 -25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $533 $-1 $311 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 32 #
+straight-curve $-1 -1 -1 $-1 0 -25 -25 -1 0 0 I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $534 $-1 $313 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 30 #
+vertex $535 -1 -1 $-1 $313 $536 #
+straight-curve $-1 -1 -1 $-1 0 25 -25 1 0 0 I I #
+simple-snl-attrib $-1 -1 $537 $314 $215 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 745128138 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $538 $-1 $315 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 21 #
+point $-1 -1 -1 $-1 25 25 -25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $539 $-1 $316 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 22 #
+point $-1 -1 -1 $-1 25 -25 -25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $540 $-1 $319 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 27 #
+straight-curve $-1 -1 -1 $-1 -25 0 25 0 -1 0 I I #
+simple-snl-attrib $-1 -1 $541 $322 $218 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1534407856 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $542 $-1 $323 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 20 #
+point $-1 -1 -1 $-1 -25 25 25 #
+simple-snl-attrib $-1 -1 $543 $326 $220 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1932973639 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $544 $-1 $327 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 19 #
+point $-1 -1 -1 $-1 -25 -25 25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $545 $-1 $329 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 34 #
+straight-curve $-1 -1 -1 $-1 25 -25 0 0 0 -1 I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $546 $-1 $330 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 36 #
+straight-curve $-1 -1 -1 $-1 25 25 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $547 $332 $159 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 25 1952365939 0 #
+simple-snl-attrib $-1 -1 $548 $333 $225 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1952365939 #
+simple-snl-attrib $-1 -1 $549 $335 $226 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1415760525 #
+simple-snl-attrib $-1 -1 $-1 $337 $81 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1639640171 1 27 1 #
+simple-snl-attrib $-1 -1 $-1 $339 $85 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 992942103 1 30 1 #
+simple-snl-attrib $-1 -1 $-1 $341 $89 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 279881974 1 33 1 #
+simple-snl-attrib $-1 -1 $-1 $343 $93 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 954548506 1 40 1 #
+simple-snl-attrib $-1 -1 $-1 $347 $101 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $550 $348 $133 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1976405189 1 15 1 #
+simple-snl-attrib $-1 -1 $551 $349 $172 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 16 1548585906 0 #
+simple-snl-attrib $-1 -1 $552 $350 $241 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 47365343 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $553 $-1 $351 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 18 #
+plane-surface $-1 -1 -1 $-1 25 0 0 -1 0 0 0 -0 1 forward_v I I I I #
+coedge $-1 -1 -1 $-1 $354 $356 $358 $471 forward $242 $-1 #
+edge $554 -1 -1 $-1 $375 -25 $473 25 $372 $555 forward @7 unknown T -25 25 -25 -25 25 25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $556 $-1 $357 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 33 #
+vertex $557 -1 -1 $-1 $471 $558 #
+straight-curve $-1 -1 -1 $-1 -25 -25 0 0 0 -1 I I #
+edge $559 -1 -1 $-1 $469 -25 $473 25 $466 $560 forward @7 unknown T -25 -25 -25 -25 25 -25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $561 $-1 $360 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 30 #
+vertex $562 -1 -1 $-1 $360 $563 #
+straight-curve $-1 -1 -1 $-1 0 25 -25 1 0 0 I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $564 $-1 $361 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 32 #
+straight-curve $-1 -1 -1 $-1 0 -25 -25 -1 0 0 I I #
+simple-snl-attrib $-1 -1 $565 $362 $248 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 745128138 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $566 $-1 $363 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 21 #
+point $-1 -1 -1 $-1 25 25 -25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $567 $-1 $364 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 22 #
+point $-1 -1 -1 $-1 25 -25 -25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $568 $-1 $367 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 27 #
+straight-curve $-1 -1 -1 $-1 -25 0 25 0 -1 0 I I #
+simple-snl-attrib $-1 -1 $569 $369 $251 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1932973639 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $570 $-1 $370 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 19 #
+point $-1 -1 -1 $-1 -25 -25 25 #
+simple-snl-attrib $-1 -1 $571 $374 $253 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1534407856 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $572 $-1 $375 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 20 #
+point $-1 -1 -1 $-1 -25 25 25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $573 $-1 $377 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 36 #
+straight-curve $-1 -1 -1 $-1 25 25 0 0 0 -1 I I #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $574 $-1 $378 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 34 #
+straight-curve $-1 -1 -1 $-1 25 -25 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $575 $379 $179 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 25 1952365939 0 #
+simple-snl-attrib $-1 -1 $576 $380 $258 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1952365939 #
+simple-snl-attrib $-1 -1 $577 $382 $259 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1415760525 #
+simple-snl-attrib $-1 -1 $-1 $385 $183 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $578 $386 $264 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 6 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $579 $-1 $389 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 11 #
+straight-curve $-1 -1 -1 $-1 -25.25 25.25 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $580 $390 $270 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 9 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $581 $-1 $391 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 7 #
+point $-1 -1 -1 $-1 -25.25 -25.25 -25.25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $582 $-1 $393 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 7 #
+straight-curve $-1 -1 -1 $-1 -25.25 0 -25.25 0 1 0 I I #
+simple-snl-attrib $-1 -1 $583 $394 $272 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 6 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $584 $396 $274 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 8 -2147483648 -1 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $585 $-1 $397 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 8 #
+point $-1 -1 -1 $-1 -25.25 25.25 -25.25 #
+simple-snl-attrib $-1 -1 $-1 $399 $190 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $586 $400 $276 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 5 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $587 $402 $277 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 6 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $588 $404 $280 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 3 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $406 $193 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $589 $407 $284 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 3 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $409 $195 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $590 $410 $288 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 4 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $591 $412 $290 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 10 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $592 $414 $291 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 12 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $417 $200 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $418 $201 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $421 $114 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $593 $422 $152 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1774576696 -1 22 0 #
+simple-snl-attrib $-1 -1 $594 $423 $208 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 17 1534407856 0 #
+simple-snl-attrib $-1 -1 $595 $424 $303 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 530334263 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $596 $-1 $426 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 35 #
+straight-curve $-1 -1 -1 $-1 -25 25 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $597 $427 $309 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 829603244 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $598 $-1 $428 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 24 #
+point $-1 -1 -1 $-1 -25 -25 -25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $599 $-1 $430 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 31 #
+straight-curve $-1 -1 -1 $-1 -25 0 -25 0 1 0 I I #
+simple-snl-attrib $-1 -1 $600 $431 $311 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 689483125 #
+simple-snl-attrib $-1 -1 $601 $433 $313 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1550456162 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $602 $-1 $434 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 23 #
+point $-1 -1 -1 $-1 -25 25 -25 #
+simple-snl-attrib $-1 -1 $603 $436 $215 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 29 1205667773 0 #
+simple-snl-attrib $-1 -1 $604 $437 $315 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1205667773 #
+simple-snl-attrib $-1 -1 $605 $439 $316 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1124535135 #
+simple-snl-attrib $-1 -1 $606 $441 $319 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1548585906 #
+simple-snl-attrib $-1 -1 $607 $443 $218 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 28 1415760525 0 #
+simple-snl-attrib $-1 -1 $608 $444 $323 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 292833208 #
+simple-snl-attrib $-1 -1 $609 $446 $220 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 26 1439860326 0 #
+simple-snl-attrib $-1 -1 $610 $447 $327 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1439860326 #
+simple-snl-attrib $-1 -1 $611 $449 $329 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 2001909197 #
+simple-snl-attrib $-1 -1 $612 $451 $330 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1697825335 #
+simple-snl-attrib $-1 -1 $613 $453 $159 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 31724905 1 37 0 #
+simple-snl-attrib $-1 -1 $614 $454 $225 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 17 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $615 $455 $226 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 18 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $461 $133 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $616 $462 $172 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1774576696 1 16 1 #
+simple-snl-attrib $-1 -1 $617 $463 $241 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 17 1534407856 0 #
+simple-snl-attrib $-1 -1 $618 $464 $351 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 530334263 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $619 $-1 $467 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 35 #
+straight-curve $-1 -1 -1 $-1 -25 25 0 0 0 -1 I I #
+simple-snl-attrib $-1 -1 $620 $468 $357 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 829603244 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $621 $-1 $469 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 24 #
+point $-1 -1 -1 $-1 -25 -25 -25 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $622 $-1 $471 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 31 #
+straight-curve $-1 -1 -1 $-1 -25 0 -25 0 1 0 I I #
+simple-snl-attrib $-1 -1 $623 $472 $360 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1550456162 #
+integer_attrib-name_attrib-gen-attrib $-1 -1 $624 $-1 $473 2 1 1 1 1 1 1 1 1 1 1 1 1 1 0 1 1 1 @8 CUBIT_ID 23 #
+point $-1 -1 -1 $-1 -25 25 -25 #
+simple-snl-attrib $-1 -1 $625 $475 $361 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 689483125 #
+simple-snl-attrib $-1 -1 $626 $477 $248 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 29 1205667773 0 #
+simple-snl-attrib $-1 -1 $627 $478 $363 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1205667773 #
+simple-snl-attrib $-1 -1 $628 $480 $364 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1124535135 #
+simple-snl-attrib $-1 -1 $629 $482 $367 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1548585906 #
+simple-snl-attrib $-1 -1 $630 $484 $251 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 26 1439860326 0 #
+simple-snl-attrib $-1 -1 $631 $485 $370 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1439860326 #
+simple-snl-attrib $-1 -1 $632 $487 $253 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 28 1415760525 0 #
+simple-snl-attrib $-1 -1 $633 $488 $375 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 292833208 #
+simple-snl-attrib $-1 -1 $634 $490 $377 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1697825335 #
+simple-snl-attrib $-1 -1 $635 $492 $378 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 2001909197 #
+simple-snl-attrib $-1 -1 $636 $494 $179 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 31724905 1 13 1 #
+simple-snl-attrib $-1 -1 $637 $495 $258 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 17 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $638 $496 $259 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 18 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $498 $264 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $639 $499 $389 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 11 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $501 $270 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $640 $502 $391 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 7 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $641 $504 $393 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 7 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $506 $272 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $507 $274 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $642 $508 $397 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 8 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $511 $276 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $512 $277 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $513 $280 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $515 $284 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $517 $288 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $518 $290 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $519 $291 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $523 $152 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $643 $524 $208 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 47365343 -1 23 0 #
+simple-snl-attrib $-1 -1 $644 $525 $303 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 18 31724905 0 #
+simple-snl-attrib $-1 -1 $645 $526 $426 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 895660322 #
+simple-snl-attrib $-1 -1 $646 $528 $309 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 33 1439860326 0 #
+simple-snl-attrib $-1 -1 $647 $529 $428 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1707088361 #
+simple-snl-attrib $-1 -1 $648 $531 $430 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1937936722 #
+simple-snl-attrib $-1 -1 $649 $533 $311 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 32 1124535135 0 #
+simple-snl-attrib $-1 -1 $650 $534 $313 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 30 2090632219 0 #
+simple-snl-attrib $-1 -1 $651 $535 $434 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 2090632219 #
+simple-snl-attrib $-1 -1 $652 $537 $215 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 745128138 1 41 0 #
+simple-snl-attrib $-1 -1 $653 $538 $315 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 21 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $654 $539 $316 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 22 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $655 $540 $319 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 27 292833208 0 #
+simple-snl-attrib $-1 -1 $656 $541 $218 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1534407856 1 38 0 #
+simple-snl-attrib $-1 -1 $657 $542 $323 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 20 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $658 $543 $220 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1932973639 1 40 0 #
+simple-snl-attrib $-1 -1 $659 $544 $327 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 19 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $660 $545 $329 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 34 1952365939 0 #
+simple-snl-attrib $-1 -1 $661 $546 $330 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 36 1415760525 0 #
+simple-snl-attrib $-1 -1 $-1 $547 $159 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $662 $548 $225 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1952365939 1 25 0 #
+simple-snl-attrib $-1 -1 $663 $549 $226 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1415760525 1 26 0 #
+simple-snl-attrib $-1 -1 $-1 $551 $172 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $664 $552 $241 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 47365343 1 17 1 #
+simple-snl-attrib $-1 -1 $665 $553 $351 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 18 31724905 0 #
+simple-snl-attrib $-1 -1 $666 $554 $467 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 895660322 #
+simple-snl-attrib $-1 -1 $667 $556 $357 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 33 1439860326 0 #
+simple-snl-attrib $-1 -1 $668 $557 $469 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1707088361 #
+simple-snl-attrib $-1 -1 $669 $559 $471 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 1937936722 #
+simple-snl-attrib $-1 -1 $670 $561 $360 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 30 2090632219 0 #
+simple-snl-attrib $-1 -1 $671 $562 $473 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 UNIQUE_ID 0 1 2090632219 #
+simple-snl-attrib $-1 -1 $672 $564 $361 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 32 1124535135 0 #
+simple-snl-attrib $-1 -1 $673 $565 $248 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 745128138 1 29 1 #
+simple-snl-attrib $-1 -1 $674 $566 $363 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 21 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $675 $567 $364 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 22 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $676 $568 $367 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 27 292833208 0 #
+simple-snl-attrib $-1 -1 $677 $569 $251 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1932973639 1 26 1 #
+simple-snl-attrib $-1 -1 $678 $570 $370 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 19 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $679 $571 $253 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1534407856 1 28 1 #
+simple-snl-attrib $-1 -1 $680 $572 $375 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 20 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $681 $573 $377 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 36 1415760525 0 #
+simple-snl-attrib $-1 -1 $682 $574 $378 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 34 1952365939 0 #
+simple-snl-attrib $-1 -1 $-1 $575 $179 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $683 $576 $258 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1952365939 1 9 1 #
+simple-snl-attrib $-1 -1 $684 $577 $259 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1415760525 1 18 1 #
+simple-snl-attrib $-1 -1 $-1 $579 $389 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $581 $391 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $582 $393 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $585 $397 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $594 $208 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $685 $595 $303 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 530334263 -1 24 0 #
+simple-snl-attrib $-1 -1 $686 $596 $426 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 35 292833208 0 #
+simple-snl-attrib $-1 -1 $687 $597 $309 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 829603244 1 45 0 #
+simple-snl-attrib $-1 -1 $688 $598 $428 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 24 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $689 $599 $430 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 31 1707088361 0 #
+simple-snl-attrib $-1 -1 $690 $600 $311 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 689483125 1 42 0 #
+simple-snl-attrib $-1 -1 $691 $601 $313 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1550456162 1 44 0 #
+simple-snl-attrib $-1 -1 $692 $602 $434 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 23 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $-1 $603 $215 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $693 $604 $315 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1205667773 1 29 0 #
+simple-snl-attrib $-1 -1 $694 $605 $316 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1124535135 1 30 0 #
+simple-snl-attrib $-1 -1 $695 $606 $319 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1548585906 1 39 0 #
+simple-snl-attrib $-1 -1 $-1 $607 $218 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $696 $608 $323 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 292833208 1 27 0 #
+simple-snl-attrib $-1 -1 $-1 $609 $220 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $697 $610 $327 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1439860326 1 28 0 #
+simple-snl-attrib $-1 -1 $698 $611 $329 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 2001909197 1 46 0 #
+simple-snl-attrib $-1 -1 $699 $612 $330 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1697825335 1 48 0 #
+simple-snl-attrib $-1 -1 $-1 $614 $225 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $615 $226 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $617 $241 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $700 $618 $351 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 530334263 1 18 1 #
+simple-snl-attrib $-1 -1 $701 $619 $467 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 35 292833208 0 #
+simple-snl-attrib $-1 -1 $702 $620 $357 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 829603244 1 33 1 #
+simple-snl-attrib $-1 -1 $703 $621 $469 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 24 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $704 $622 $471 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 31 1707088361 0 #
+simple-snl-attrib $-1 -1 $705 $623 $360 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1550456162 1 30 1 #
+simple-snl-attrib $-1 -1 $706 $624 $473 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @9 ENTITY_ID 0 3 23 -2147483648 -1 #
+simple-snl-attrib $-1 -1 $707 $625 $361 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 689483125 1 32 1 #
+simple-snl-attrib $-1 -1 $-1 $626 $248 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $708 $627 $363 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1205667773 1 21 1 #
+simple-snl-attrib $-1 -1 $709 $628 $364 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1124535135 1 22 1 #
+simple-snl-attrib $-1 -1 $710 $629 $367 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1548585906 1 27 1 #
+simple-snl-attrib $-1 -1 $-1 $630 $251 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $711 $631 $370 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1439860326 1 19 1 #
+simple-snl-attrib $-1 -1 $-1 $632 $253 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $712 $633 $375 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 292833208 1 20 1 #
+simple-snl-attrib $-1 -1 $713 $634 $377 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1697825335 1 36 1 #
+simple-snl-attrib $-1 -1 $714 $635 $378 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 2001909197 1 34 1 #
+simple-snl-attrib $-1 -1 $-1 $637 $258 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $638 $259 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $644 $303 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $715 $645 $426 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 895660322 1 47 0 #
+simple-snl-attrib $-1 -1 $-1 $646 $309 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $716 $647 $428 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1707088361 1 31 0 #
+simple-snl-attrib $-1 -1 $717 $648 $430 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1937936722 1 43 0 #
+simple-snl-attrib $-1 -1 $-1 $649 $311 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $650 $313 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $718 $651 $434 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 2090632219 1 32 0 #
+simple-snl-attrib $-1 -1 $-1 $653 $315 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $654 $316 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $655 $319 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $657 $323 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $659 $327 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $660 $329 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $661 $330 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $665 $351 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $719 $666 $467 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 895660322 1 35 1 #
+simple-snl-attrib $-1 -1 $-1 $667 $357 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $720 $668 $469 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1707088361 1 24 1 #
+simple-snl-attrib $-1 -1 $721 $669 $471 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 1937936722 1 31 1 #
+simple-snl-attrib $-1 -1 $-1 $670 $360 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $722 $671 $473 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 1 @13 MERGE_PARTNER 0 4 2090632219 1 23 1 #
+simple-snl-attrib $-1 -1 $-1 $672 $361 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $674 $363 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $675 $364 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $676 $367 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $678 $370 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $680 $375 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $681 $377 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $682 $378 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $686 $426 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $688 $428 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $689 $430 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $692 $434 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $701 $467 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $703 $469 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $704 $471 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+simple-snl-attrib $-1 -1 $-1 $706 $473 1 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 1 @17 NEW_SIMPLE_ATTRIB 7 @16 GRAPHICS_OPTIONS @14 geometry color @10 mesh color @19 geometry visibility @15 mesh visibility @11 render mode @11 transparent 0 6 -1 -1 0 0 0 0 #
+End-of-ACIS-data 
