@@ -1,0 +1,245 @@
+% FRENSIE tree flowchart
+% Luke Kersting 10/2/2014
+% \documentclass{article}
+\documentclass[landscape]{letter}
+\usepackage{tikz}
+\usepackage{lscape}
+\usepackage{tikz-qtree}
+
+\begin{document}
+\usetikzlibrary{shapes.geometric, arrows, trees}
+\tikzstyle{main} = [rectangle, rounded corners, minimum width=4cm, 
+minimum height=1cm, text centered, draw=black]
+
+\tikzstyle{dependency} = [trapezium, trapezium left angle=60, trapezium right angle=120, 
+minimum width=3cm, minimum height=0.5cm, text centered, draw=black, fill=gray!30]
+
+\tikzstyle{photon} = [rectangle, minimum width=2.2cm, minimum height=0.75cm, 
+text centered, draw=black, fill=blue!30]
+
+\tikzstyle{electron} = [rectangle, minimum width=2.2cm, minimum height=0.75cm, 
+text centered, draw=black, fill=green!30]
+
+\tikzstyle{neutron} = [rectangle, minimum width=2.2cm, minimum height=0.75cm, 
+text centered, draw=black, fill=red!30]
+
+\tikzstyle{sub} = [rectangle, minimum width=2.2cm, minimum height=0.75cm, 
+text centered, draw=black]
+
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{line} = [thick]
+
+% Collision Tree
+\begin{tikzpicture}[remember picture, overlay, node distance=1.5cm, 
+grow'=down, level distance=1.5cm,sibling distance=3.5cm]
+
+\tikzset{edge from parent/.style= 
+{thick, draw, edge from parent fork down}
+}
+
+% FRENSIE tree
+	\node [main, xshift=6.05cm] (0a) {\Large FRENSIE}
+ 		% First Branch
+        child { node[electron] (1a) {\Large scripts} }
+		child { node[electron] (1b) {\Large patches} }
+		child {	node[electron] (1c) {\Large \bf packages} 
+			% Second Branch
+			child { node[photon] (2a) {\large utility} }
+			child { node[photon] (2b) {\large transmutation} }
+			child { node[photon] (2c) {\large \bf monte carlo}
+				%Third Branch 
+				child { node[neutron] (3a) {\large source} }
+				child { node[neutron] (3b) {\large manager} }
+				child { node[neutron] (3c) {\large estimator} }
+				child { node[neutron] (3d) {\large doc} }
+				child { node[neutron] (3e) {\large \bf core} }
+				child { node[neutron] (3f) {\large collision}  
+					%Fourth Branch
+					child { node[neutron, fill=orange!25] (4a) {\large core} }
+					child { node[neutron, fill=orange!25] (4b) {\large interface} }
+					child { node[neutron, fill=orange!25] (4c) {\large \bf native} 
+						%Fifth Branch
+						child { node[neutron, fill=yellow!40] (5a) {\large test} }
+						child { node[neutron, fill=yellow!40] (5c) {\large \bf src} }
+					} 
+				}
+			}
+			child { node[photon] (2d) {\large geometry} }
+			child { node[photon] (2e) {\large data} }
+		}
+		child {	node[electron] (1d) {\Large cli} }
+		child {	node[electron] (1e) {\Large cmake} }
+		child {	node[electron] (1f) {\Large data} }
+		child {	node[electron] (1g) {\Large doc} };
+
+\end{tikzpicture}
+\newpage
+%Collision programs
+\begin{tikzpicture}[remember picture, overlay, node distance=1.5cm,level distance=3.5cm,sibling distance=0.5cm]
+\tikzset{edge from parent/.style= {level distance=1cm, thick, draw, edge from parent fork right}, grow'=right, ->, parent anchor=east }
+
+
+\Tree
+    [.\node [neutron, xshift=-5cm] (core) {\Large core};
+        [.\node [dependency, xshift=-4.7cm, yshift=-7cm] (core2) {Particle Bank}; ]
+        [.\node [dependency, xshift=-4.7cm, yshift=2cm] (core1) {Photon State}; 
+			% Photoatomic Reaction
+			[.\node [sub, xshift=-3cm] (Patomic) {\Large Photoatomic reaction}; 
+				[.\node [sub, xshift=2cm] (Patomic1) {\Large Coherent Photoatomic reaction}; ]
+				[.\node [sub, xshift=2cm] (Patomic1) {\Large Incoherent Photoatomic reaction}; ]
+				[.\node [sub, xshift=2cm] (Patomic1) {\Large Pair Production Photoatomic reaction}; ]
+				[.\node [sub, xshift=2cm] (Patomic1) {\Large Photoelectric Photoatomic reaction}; ] 
+			]			
+			% Photon Scattering Distribution
+			[.\node [sub, xshift=-2cm] (Pscat) {\Large Photon Scattering Distribution};
+				[.\node [sub, xshift=2.75cm] (Pscat1) {\Large Photon Scattering Distribution}; ]
+				[.\node [sub, xshift=2.75cm] (Pscat1) {\Large Photon Scattering Distribution}; ]
+				[.\node [sub, xshift=2.75cm] (Pscat1) {\Large Photon Scattering Distribution}; ]
+				[.\node [sub, xshift=2.75cm] (Pscat1) {\Large Photon Scattering Distribution}; ]
+			]
+			% Photon Production Distribution
+			[.\node [sub, xshift=-2cm] (Ppro) {\Large Photon Production Distribution}; ]
+		] 
+        [.\node [dependency, xshift=-4.7cm, yshift=2cm] (core3) {Neutron State}; ]
+    ]
+\draw [arrow] (core2) -- (Patomic);
+\draw [arrow] (core3) -- (Ppro);
+
+% Photon Production Reaction
+\node [sub, below of=Ppro,xshift=0cm] (Ppro1) {\Large Photon Production Reaction}; ]
+\draw [arrow] (Ppro) -- (Ppro1);
+%\draw [arrow] (core1) -- (Ppro1);
+%\draw [arrow] (core2) -| (Ppro1);
+%\draw [arrow] (core3) -- (Ppro1);
+
+% Photon Data
+\tikzset{edge from parent/.style= {level distance=1cm, thick, draw, edge from parent fork left}, grow'=left, <-, parent anchor=west }
+\Tree
+	[.\node [sub, yshift=-10cm, xshift=2.2cm] (Pdata) {\Large Photon Data};
+	    [.\node [dependency, yshift=-9.95cm] (Pdata1) {Photon Data Basic}; ]
+		[.\node [dependency, yshift=-9.95cm] (Pdata2) {Photon Data Doppler Broadening}; ] 
+		[.\node [dependency, yshift=-9.95cm] (Pdata3) {Photon Data Fluorescence}; ]
+    ]
+%\node (PData) [sub, yshift=-4cm] {\Large Photon Data};
+%\node (PData1) [dependency, left of=PData, xshift=-4cm] {Photon Data Basic};
+%\node (PData2) [dependency, above of=PData1] {Photon Data Doppler Broadening};
+%\node (PData3) [dependency, below of=PData1] {Photon Data Fluorescence};
+
+%\draw [arrow] (PData1) -- (PData);
+%\draw [arrow] (PData2) -- (PData);
+%\draw [arrow] (PData3) -- (PData);
+
+% Neutrons, Electrons, and Photons States
+%\node (sub2) [electron, below of=start] {Electron State};
+%\node (sub1) [neutron, left of=sub2, xshift=-2cm] {Neutron State};
+%\node (sub3) [photon, right of=sub2, xshift=2cm] {Photon State};
+
+
+
+\end{tikzpicture}
+\newpage
+
+% Core Tree
+\begin{tikzpicture}[remember picture, overlay, node distance=1.5cm, 
+grow'=down, level distance=1.5cm,sibling distance=3.5cm]
+
+\tikzset{edge from parent/.style= 
+{thick, draw, edge from parent fork down}
+}
+
+% FRENSIE tree
+    \node [main, xshift=6.05cm] (0a){\Large FRENSIE}
+		% First Branch
+        child { node[electron] (1a) {\Large scripts} }
+		child { node[electron] (1b) {\Large patches} }
+		child {	node[electron] (1c) {\Large \bf packages} 
+			% Second Branch
+			child { node[photon] (2a) {\large utility} }
+			child { node[photon] (2b) {\large transmutation} }
+			child { node[photon] (2c) {\large \bf monte carlo}
+				%Third Branch 
+				child { node[neutron] (3a) {\large source} }
+				child { node[neutron] (3b) {\large manager} }
+				child { node[neutron] (3c) {\large estimator} }
+				child { node[neutron] (3d) {\large doc} }
+				child { node[neutron] (3e) {\large \bf core} 
+					%Fourth Branch
+					child { node[neutron, fill=orange!25] (3a) {\large test} }
+					child { node[neutron, fill=orange!25] (3a) {\large \bf src} }
+				}
+				child { node[neutron] (3f) {\large collision} }
+			}
+			child { node[photon] (2d) {\large geometry} }
+			child { node[photon] (2e) {\large data} }
+		}
+		child {	node[electron] (1d) {\Large cli} }
+		child {	node[electron] (1e) {\Large cmake} }
+		child {	node[electron] (1f) {\Large data} }
+		child {	node[electron] (1g) {\Large doc} };
+
+	\path (0a) -- (1a);
+
+\end{tikzpicture}
+
+\newpage
+% Core Programs
+\begin{tikzpicture} [remember picture, overlay, node distance=1.5cm]
+
+% Particle State
+\node (start) [main, xshift=6.05cm, yshift=-3cm] {\Large Particle State};
+\node (part1) [dependency, above of=start] {Particle State Core};
+\node (part2) [dependency, left of=part1, xshift=-2.5cm] {Particle Type};
+\node (factory) [main, right of=start, xshift=6cm] {\Large Particle State Factory};
+
+\draw [arrow] (part1) -- (start);
+\draw [arrow] (part2) -- (start);
+\draw [arrow] (part2) -- (part1);
+
+% Other Programs
+\node (shell) [main, above of=part1, xshift=-2cm, yshift=0.8cm] {\Large Simulation Properties};
+\node (shell) [main, above of=part1, xshift=-7cm, yshift=0.8cm] {\Large Electron Shell};
+\node (unit) [main, above of=part1, xshift=4.2cm, yshift=0.8cm] {\Large Unit Test Harness Extensions};
+
+% Neutrons, Electrons, and Photons States
+\node (sub2) [electron, below of=start] {Electron State};
+\node (sub1) [neutron, left of=sub2, xshift=-2cm] {Neutron State};
+\node (sub3) [photon, right of=sub2, xshift=2cm] {Photon State};
+
+\draw [arrow] (start) -- (sub1);
+\draw [arrow] (start) -- (sub2);
+\draw [arrow] (start) -- (sub3);
+%\draw [arrow] (sub1) -- (factory);
+%\draw [arrow] (sub2) -- (factory);
+%\draw [arrow] (sub3) -- (factory);
+\draw [arrow] (start) -- (factory);
+
+% Photon sub classes
+\node (phot1) [dependency, below of=sub3, xshift=2cm, fill=blue!20] {\small Phase Space Dimensions Traits Decl.};
+\node (phot2) [dependency, below of=phot1, fill=blue!20] {\small Phase Space Dimensions};
+\node (phot3) [dependency, below of=phot2, fill=blue!20] {\small Phase Space Dimensions Traits};
+
+%\draw [arrow] (start) -| (phot1);
+\draw [arrow] (sub3) -- (phot1);
+\draw [arrow] (phot1) -- (phot2);
+\draw [arrow] (phot2) -- (phot3);
+\draw [line] (7.85,-3.79) -- (7.85,-9);
+\draw [arrow] (7.85,-9) -- (phot3);
+\draw [arrow] (7.85,-7.5) -- (phot2);
+\draw [arrow] (7.85,-6) -- (phot1);
+
+% Neutron sub classes
+\node (neut1) [neutron, below of=sub1, xshift=-2cm, fill=red!20] {Particle Bank};
+\node (neut2) [neutron, below of=neut1, yshift=-0.5cm, fill=red!20] {Nuclear Reaction Bank};
+\node (neut3) [dependency, left of=neut1, xshift=-3cm, fill=red!10] {\small Nuclear Reaction Type};
+\node (neut4) [dependency, above of=neut3, yshift=-0.3cm, fill=red!10] {\small Module Traits};
+\node (neut5) [dependency, below of=neut3, yshift=0.3cm, fill=orange!50] {\small Geometry};
+
+
+\draw [arrow] (start) -| (neut1);
+\draw [arrow] (sub1) -- (neut1);
+\draw [arrow] (neut1) -- (neut2);
+\draw [arrow] (neut3) -- (neut1);
+\draw [arrow] (neut4) -- (neut1);
+\draw [arrow] (neut5) -- (neut1);
+\end{tikzpicture}
+\end{document}
