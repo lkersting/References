@@ -71,7 +71,7 @@
          \item Atomic excitation
          \item Hard elastic scattering
          \item Electroionization
-         \item Bremmstrahlung
+         \item Bremsstrahlung
       \end{itemize}
     \end{itemize}
   \end{block}
@@ -91,7 +91,7 @@
 
   \begin{block}{MCNP}
     \begin{itemize}
-      \item Historically has only used a condensed-history approched with Goudsmit-Saunderson mutiple scattering techniques.
+      \item Historically has only used a condensed-history approached with Goudsmit-Saunderson multiple scattering techniques.
       \item MCNP6 implemented a single-event method for energies below 1 keV, 
               were the condensed-history method no longer holds.
     \end{itemize}
@@ -99,9 +99,8 @@
     
   \begin{block}{Penelope}
     \begin{itemize}
-      \item Implenments a mixed method that simulates soft (condensed-history) 
+      \item Implements a mixed method that simulates soft (condensed-history) 
               events below a cutoff energy/angle and hard (single-events) above.
-      \item Uses Goudsmit-Saunderson Multiple Scattering
     \end{itemize}    
   \end{block}
 
@@ -120,7 +119,7 @@
 %%----------------------------------------------------------------------------%%
 \begin{frame}{Electron Mode}
 
-  \begin{block}{Frensie}
+  \begin{block}{FRENSIE}
     \begin{itemize}
       \item Hard events implemented using cross-sectional data from MCNP6
       \item Condensed history method will be chosen in conjunction with an adjoint method
@@ -153,6 +152,7 @@
     \begin{itemize}
       \item There is no angular deflection.
       \item There are no secondary particles.
+      \item Only energy loss needs to be taken into account
     \end{itemize}
   \end{block}  
 
@@ -173,6 +173,7 @@
     \begin{itemize}
       \item There is no energy loss.
       \item There are no secondary particles.
+      \item Only angular deflection needs to be taken into account.
     \end{itemize}
   \end{block}  
       
@@ -180,7 +181,7 @@
     \begin{itemize}
       \item ACE tables provide histogram CDF of the outgoing angle cosine, \textmu, 
             for $14-16$ energy groups.
-      \item for $\mu > 0.999999$ an analytical function, $f(\mu)$, derived from Moli\`ere's screening factor is used to compute the scattering angle
+      \item for $\mu > 0.999999$ an analytical function, $f(\mu)$, derived from Moli\`ere's screening factor is used to compute the scattering angle.
     \end{itemize}
 
   \begin{equation*}
@@ -204,13 +205,14 @@
       \item The subshell is directly sampled.
       \item A knock-on electron is ejected.
       \item The incident electron energy is reduced by the $E_{knock} + E_{binding}$.
+      \item Conservation of momentum is used to find the scattering and ejection angles.
       \end{itemize}
   \end{block}  
       
   \begin{block}{Implementation}
     \begin{itemize}
       \item ACE tables provide CDF of the knock-on energy, $E_{knock}$, based on the incident electron energy.
-      \item Conservation of momentum is used to find the scattering and ejection angles (which are sampled independently).
+      \item The scattering and ejection angles are sampled independently breaking from a purely analog sampling.
       \item The shell vacancy is handled using atomic relaxation data. 
     \end{itemize}
   \end{block}  
@@ -228,15 +230,15 @@
 
 {\large Conservation of Energy}
   \begin{equation*}
-    (T + m_ec^2) + (M_ac^2) =(T' + m_ec^2) + (T_a + M_ac^2 + T_{knock} + m_ec^2) + E_{Binding}
+    (E + m_ec^2) + (M_ac^2) =(E' + m_ec^2) + (E_a + M_ac^2) + (E_{knock} + m_ec^2) + E_{Binding}
   \end{equation*}
 Assume the binding energy is negligible 
   \begin{equation*}
-    T = T' + T_{knock}
+    E = E' + E_{knock}
   \end{equation*}
-  Solving you obtain:
-  $$ cos(\theta) = \frac{T'}{T}\frac{p}{p'}~~~~\text{and}~~~~
-  cos(\phi)=\frac{T_{knock}}{T}\frac{p}{p_{knock}}$$
+  Solving independently you obtain:
+  $$ cos(\theta) = \frac{E'}{E}\frac{p}{p'}~~~~\text{and}~~~~
+  cos(\phi)=\frac{E_{knock}}{E}\frac{p}{p_{knock}}$$
 
 
 \end{frame}
@@ -244,7 +246,7 @@ Assume the binding energy is negligible
 %%----------------------------------------------------------------------------%%
 \begin{frame}{Sampling Electroionization}
   
-{\large The original sampling routine implemented in FRENSIE differed slightly from MCNP6 which caused the sampling of negative electrons energies. } \\ 
+{\large The original sampling routine implemented in FRENSIE sampled negative electrons energies. } \\ 
 ~~\\
 
   \begin{itemize}
@@ -257,20 +259,20 @@ Assume the binding energy is negligible
 
 
 %%----------------------------------------------------------------------------%%
-\begin{frame}{Bremmstrahlung}
+\begin{frame}{Bremsstrahlung}
   \begin{block}{Reaction}
   \begin{itemize}
     \item A photon is ejected.
-    \item ACE tables provide CDF of the photon energy, $E_{\gamma}$, based on the incident electron energy.
     \item The incident electron energy is reduced by the $E_{\gamma}$.
     \item The electron direction is assumed to be essentially unchanged.
       \end{itemize}
   \end{block}  
       
   \begin{block}{Implementation}
+
     \begin{itemize}
+    \item ACE tables provide CDF of the photon energy, $E_{\gamma}$, based on the incident electron energy.
     \item An analytical dipole function, $p(\mu)$, is used to sample the direction of the outgoing photon.
-    \item MCNP6 also uses a table based scheme from their condensed history method.
   \end{itemize}
   \begin{equation*}
     p(\mu)d\mu = \frac{(1-\beta^2)}{2(1-\beta\mu)^2}d\mu
@@ -283,10 +285,10 @@ Assume the binding energy is negligible
 \begin{frame}{Known Issues}
   \begin{block}{Absorption at low energies}
   \begin{itemize}
-    \item At energies near the cutoff (10 eV) the reaction cross section is dominated by elastic scattering (by order $10^7$ for H)
-    \item It is unlikely the electron will scatter below the cutoff energy 
-    \item A temporary fix is to raise the cutoff energy (to 15eV for H) to prevent indefinite elastic scattering
-    \item MCNP notes this problem and suggests a minimum cutoff energy of 20eV
+    \item At energies near the cutoff (10 eV) the reaction cross section is dominated by elastic scattering (by order $10^7$ for H barns).
+    \item It is unlikely the electron will scatter below the cutoff energy.
+    \item A temporary fix is to raise the cutoff energy (to 15 eV) to prevent indefinite elastic scattering.
+    \item MCNP notes a similar problem and suggests a minimum cutoff energy of 20 eV.
   \end{itemize}
 \end{block}
 
@@ -296,19 +298,21 @@ Assume the binding energy is negligible
 \begin{frame}{Testing}
   \begin{block}{Test Problem}
   \begin{itemize}
-    \item 10 keV electron delta source in cold Hydrogen
-    \item Set surface tallies on 5 spheres of increasing radius to measure the current and flux
-    \item Radii of 0.005, 0.001, 0.0015, 0.002 and 0.0025 cm
-    \item The electron energy cutoff was set to 15eV and secondary photons where not tracked
+    \item A 10 keV electron delta source was modeled in cold Hydrogen.
+    \item Surface tallies where set on concentric spheres to measure the flux.
+    \item Radii ranged from 0.005 to 0.0025 cm for 5 spheres.
+    \item Electron energy cutoff was set to 15 eV.
+    \item Secondary photons where not tracked.
   \end{itemize}
 \end{block}
 
   \begin{block}{Verification}
   \begin{itemize}
-    \item Test results were verified with MCNP6
-    \item The ratio of the  surface flux from MCNP6 and FRENSIE were plotted
+    \item Test results were verified against MCNP6 using the ratio surface flux
+    \item $10^6$ particles history where sampled in MCNP6.
+    \item $10^6$ particles history where sampled in FRENSIE.
     \item The $3\sigma$ rule was used to look at the standard deviation of the flux ratio from the expected value of $1$
-    \item 68.27\%, 95.45\% and 99.73\% of the ratios should be within $1, 2 \text{ and } 3 \sigma$ respectfully to verify the sampling routines are the same to a near certainty
+    \item 68.27\%, 95.45\% and 99.73\% of the ratios should be within $1, 2 \text{ and } 3 \sigma$ respectively for agreement.
   \end{itemize}
 \end{block}
 
@@ -387,43 +391,43 @@ $3 ~\sigma$ & 99.46\% & 97.89\% & 97.93\% & 98.48\% & 98.50\%
 
 
 %%----------------------------------------------------------------------------%%
+\begin{frame}{Conclusions}
+ 
+    \begin{itemize}
+      \item The agreement is slightly below the $3~\sigma$ rule.
+      
+      \item There appears to be a tail off in the upper energy bins.
+       
+      \item Further testing is planned to evaluate the the single scattered spectrum.
+  
+      \item FRENSIE code currently runs 100x slower than MCNP6 for a simple geometry.
+      
+      \item Modifications need to be made to speed up transport in DAG geometry by reducing the number of ray firings.
+      
+      \item Implementation of Root's combinational geometry would also speed up geometry transport.
+       
+    \end{itemize}
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
 \begin{frame}{Possible Adjoint Methods}
   \begin{block}{Hybrid Multigroup/Continuous-Energy BFP}
  
     \begin{itemize}
       \item The same basic multigroup cross-section data can be used for forward and adjoint calculations. 
        
-      \item The adjoint transport model is nearly identical to the forward making implementation easy 
-
-      \item The transport equation is generalized for Monte Carlo transport of neutral and charged particles.\\ They implement for electrons and photons. 
-
+      \item The adjoint transport model is nearly identical to the forward making implementation easy.
+    \end{itemize}
+  \end{block}
+  
+  \begin{block}{Generalized Particle for Adjoint Transport}
+    \begin{itemize}
+        \item The CSDA is used with Moli\`{e}re's multiple scattering theory.
+       
+         \item No secondary particles are produced. One particle enters an event and one leaves.
     \end{itemize}
   \end{block}
 
-\end{frame}
-
-%%----------------------------------------------------------------------------%%
-\begin{frame}{Other Possible Adjoint Methods}
-
-     \begin{itemize}
-       \item 1980 - Adjoint Electron Transport in the CSDA
-           \begin{itemize}
-             \item Goudsmit and Saunderson Scattering
-           \end{itemize}
-                 
-       \item 1995 - Adjoint Elecrton-Photon Tansport using BFS in ITS
-           \begin{itemize}
-             \item Multigroup/Continuous Energy
-           \end{itemize}
-           
-       \item 1996 - Adjoint Multigroup/Continuous Energy BFP Equation
-
-      \item 2005 - Generalized Particle for Couple Adjoint $\gamma$ - $e^-$ - $e^+$ Transport
-           \begin{itemize}
-             \item CSDA using Moli\`{e}re's multiple scattering
-           \end{itemize}
-       
-     \end{itemize}
 
 \end{frame}
 
