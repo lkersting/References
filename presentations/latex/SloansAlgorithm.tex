@@ -1,0 +1,151 @@
+\documentclass{beamer}
+\usetheme[white]{Wisconsin}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+\usepackage{amsthm} \usepackage{amsmath}
+%% \usepackage{eqnarray}
+\usepackage[mathcal]{euscript} \usepackage{color}
+\usepackage{textcomp}
+\usepackage{algorithm,algorithmic}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[absolute,overlay]{textpos}
+  \setlength{\TPHorizModule}{1mm}
+  \setlength{\TPVertModule}{1mm}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+  backgroundcolor=\color{lbcolor},
+  tabsize=4,
+  rulecolor=,
+  language=c++,
+  basicstyle=\scriptsize,
+  upquote=true,
+  aboveskip={1.5\baselineskip},
+  columns=fixed,
+  showstringspaces=false,
+  extendedchars=true,
+  breaklines=true,
+  prebreak =
+  \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+  frame=single,
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  identifierstyle=\ttfamily,
+  keywordstyle=\color[rgb]{0,0,1},
+  commentstyle=\color[rgb]{0.133,0.545,0.133},
+  stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+
+%% colors
+\setbeamercolor{boxheadcolor}{fg=white,bg=UWRed}
+\setbeamercolor{boxbodycolor}{fg=black,bg=white}
+
+%%----------------------------------------------------------------------------%%
+\author{Luke J. Kersting
+    \\ NEEP
+    \\ University of Wisconsin - Madison
+    \\ SNL
+}
+
+\date{\today}
+\title{Calculating Moments Using Sloan's Algorithm}
+\begin{document}
+\maketitle
+
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Moments}
+
+  \begin{block}{Legendre}
+  \begin{equation*}
+    f_l = \int_{-1}^{1}f(\mu)P_l(\mu)d\mu
+  \end{equation*}
+  \end{block}
+    
+  \begin{block}{Gauss}
+  \begin{equation*}
+    M_n = \int_{-1}^{1}\mu^nf(\mu)d\mu = \sum_{l=0}^{\inf}\frac{2l+1}{2}
+    f_l\int_{-1}^{1}\mu^nP_l(\mu)d\mu
+  \end{equation*}
+  \end{block}
+
+  \begin{block}{Radau}
+  \begin{equation*}
+    M^*_n = M_n - M_{n+1}
+  \end{equation*}
+  \end{block}
+    
+
+\end{frame}
+
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Negative Weights}
+
+\begin{block}{Variance}
+  If the Variance is negative a negative weight will be preoduced
+  \begin{equation*}
+    \sigma^2_i = N_i/N_{i-1}
+  \end{equation*}
+  Therefore the variance is negative if the normalization factor $N$ is negative. \\
+\end{block}
+
+\begin{block}{Normalization Factor}
+  \begin{equation*}
+    N_i = \sum_{k=0}^{i} A_{i,k}M^*_{k+i}
+  \end{equation*}
+  Where $A_{i,k}$ are the coefficients of the orthogonal polynomial $Q_n$
+\end{block}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{The n=2 case}
+
+The abscissa for $x_n = 1$. Sloan shows (B-57) that the weight of the last 
+abscissa is:
+
+$$w_n = 1 - \sum_{i=1}^{n-1}\frac{N_{i-1}}{Q_{i-1}(1)Q_i(1)}$$
+
+Plugging in the recursion relationship for $Q_i(x)$ (B-117) \\
+and requiring $w_n>0$ and solving for the mean coefficient,$\mu_{n-1}$ we get:
+
+$$\mu^{max}_{n-1} \leq 1 - \sigma^2_{n-2}\frac{Q_{n-3}(1)}{Q_{n-2}(1)} - G_{n-2}(1)$$
+
+Where (B-143b):
+
+$$G_{n-2}(1) = \frac{N_{n-2}}{[Q_{n-2}(1)]^2}\left[ 1 -\sum_{k=1}^{n-2} 
+                \frac{N_{k-1}}{Q_{k-1}(1)Q_{k}(1)}\right]^{-1}$$
+
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{The n=2 case continued}
+
+For the $n=2$ case the reduces to:
+
+$$\mu^{max}_1 \leq 1 - \sigma^2_{0}\frac{0}{Q_{0}(1)} - G_{0}(1)$$
+
+Where:
+
+$$G_{0}(1) = \frac{N_{0}}{[Q_{0}(1)]^2} = N_{0} = M^*_0 = f_0 - f_1 = 1 - f_1$$
+
+Therefore sloan requires:
+
+$$\mu_1 \leq f_1 \rightarrow \frac{M^*_1}{M^*_0}\leq f_1$$
+
+$$\frac{-\frac{1}{3} + f_1 - \frac{2}{3} f_2}{1 - f_1}\leq f_1$$
+
+$$2f_2 + 1\geq 3f_1^2$$
+
+
+\end{frame}
+
+\end{document}
