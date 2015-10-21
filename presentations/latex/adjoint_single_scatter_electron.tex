@@ -1,0 +1,339 @@
+\documentclass{beamer}
+\usetheme[white]{Wisconsin}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+\usepackage{amsthm} \usepackage{amsmath}
+\usepackage{eqnarray}
+\usepackage[mathcal]{euscript} \usepackage{color}
+\usepackage{textcomp}
+\usepackage{algorithm,algorithmic}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+backgroundcolor=\color{lbcolor},
+tabsize=4,
+rulecolor=,
+language=c++,
+basicstyle=\scriptsize,
+upquote=true,
+aboveskip={1.5\baselineskip},
+columns=fixed,
+showstringspaces=false,
+extendedchars=true,
+breaklines=true,
+prebreak =
+\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+frame=single,
+showtabs=false,
+showspaces=false,
+showstringspaces=false,
+identifierstyle=\ttfamily,
+keywordstyle=\color[rgb]{0,0,1},
+commentstyle=\color[rgb]{0.133,0.545,0.133},
+stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+%% colors
+\setbeamercolor{boxheadcolor}{fg=white,bg=red}
+\setbeamercolor{boxbodycolor}{fg=black,bg=white}
+
+%%----------------------------------------------------------------------------%%
+\author{Luke J. Kersting
+\\ UW - Madison
+\\ SNL 1341
+}
+\date{\today}
+\title{Electron Mode in FRENSIE}
+\begin{document}
+\maketitle
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Single-Event Adjoint Electron Transport}
+
+\begin{block}{Goals}
+	\begin{itemize}
+	\item Transform forward electron data to adjoint
+	\item Use single-event ACE data in transformation
+	\item Output usable adjoint single-event electron cross-sections and PDF's
+	\end{itemize}
+
+\end{block}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Forward Transport}
+\begin{block}{Time-Independent Boltzmann Equation}
+\begin{multline}
+  \Omega \nabla \phi(\boldsymbol r,E,\boldsymbol\Omega) + 
+  \Sigma_t(\boldsymbol{r},E)\phi(\boldsymbol{r},E,\boldsymbol{\Omega}) = \\
+  \int\int\Sigma_t(\boldsymbol{r},E')C(\boldsymbol{r},E'\rightarrow E,\boldsymbol{\Omega'}\rightarrow\boldsymbol{\Omega})\phi(\boldsymbol{r},E',\boldsymbol{\Omega'})dE'd\Omega' + 
+  S(\boldsymbol{r},E,\boldsymbol{\Omega})
+\end{multline}
+\end{block}
+
+\begin{block}{Collision Kernel}
+\begin{multline}
+C(\boldsymbol{r},E'\rightarrow E,\boldsymbol{\Omega'}\rightarrow\boldsymbol{\Omega}) = \\
+\sum_A p_A(\boldsymbol{r},E') \sum_j p_{j,A}(E') c_{j,A}(E') f_{j,A}(E'\rightarrow E,\boldsymbol{\Omega'}\rightarrow\boldsymbol{\Omega})
+\end{multline}
+
+\begin{equation}
+p_A(\boldsymbol{r},E') = \frac{\Sigma_A(\boldsymbol{r},E')}{\Sigma_t(\boldsymbol{r},E')}
+~~~~~~~~~~~~~~~~~~
+p_{j,A}(E') = \frac{\sigma_{j,A}(E')}{\sigma_A(E')} \nonumber
+\end{equation}
+
+\end{block}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Adjoint Transport}
+
+%\begin{block}{Time-Independent Boltzmann Equation}
+%\begin{multline}
+%  -\Omega \nabla \phi^{\dagger}(\boldsymbol r,E,\boldsymbol\Omega) + 
+%  \Sigma_t(\boldsymbol{r},E)\phi^{\dagger}(\boldsymbol{r},E,\boldsymbol{\Omega}) = \\
+%  \int\int\Sigma_t(\boldsymbol{r},E)C(\boldsymbol{r},E\rightarrow E',\boldsymbol{\Omega}\rightarrow\boldsymbol{\Omega})\phi^{\dagger}(\boldsymbol{r},E',\boldsymbol{\Omega})dE'd\Omega' + 
+%  D(\boldsymbol{r},E,\boldsymbol{\Omega})
+%\end{multline}
+%\end{block}
+
+\begin{block}{Adjoint Collision Kernel}
+\begin{multline}
+C^{\dagger}(\boldsymbol{r'},E'\rightarrow E,\boldsymbol{\Omega'}\rightarrow\boldsymbol{\Omega}) = \\
+\sum_A p_A^{\dagger}(\boldsymbol{r'},E') \sum_j p^{\dagger}_{j,A}(E') \frac{\sigma_{j,A}(E)c_{j,A}(E)f_{j,A}(E\rightarrow E',\boldsymbol{\Omega}\rightarrow\boldsymbol{\Omega'})}{\sigma^{\dagger}_{j,A}(E')}
+\end{multline}
+
+\begin{equation}
+\sigma^{\dagger}_{j,A}(E') = \int\sigma_{j,A}(E)c_{j,A}(E)f_{j,A}(E\rightarrow E')dE
+\end{equation}
+
+\begin{equation}
+p^{\dagger}_A(\boldsymbol{r'},E') = \frac{\Sigma^{\dagger}_A(\boldsymbol{r'},E')}{\Sigma{\dagger}(\boldsymbol{r'},E')}
+~~~~~~~~~~~~~~~~~~
+p^{\dagger}_{j,A}(E') = \frac{\sigma^{\dagger}_{j,A}(E')}{\sigma^{\dagger}_A(E')} \nonumber
+\end{equation}
+
+\end{block}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Adjoint Transport}
+
+First the type of nuclide that the electron interacts with is sampled from:
+\begin{equation}
+p^{\dagger}_A(\boldsymbol{r'},E') = \frac{\Sigma^{\dagger}_A(\boldsymbol{r'},E')}{\Sigma{\dagger}(\boldsymbol{r'},E')}
+\end{equation}
+
+Then the reaction type is sampled from:
+\begin{equation}
+p^{\dagger}_{j,A}(E') = \frac{\sigma^{\dagger}_{j,A}(E')}{\sigma^{\dagger}_A(E')} \nonumber
+\end{equation}
+
+Finally, $E$ and $\Omega$ are sampled from:
+\begin{equation}
+f^{\dagger}_{j,A}(E'\rightarrow E,\boldsymbol{\Omega'}\rightarrow\boldsymbol{\Omega}) = 
+\frac{\sigma_{j,A}(E)c_{j,A}(E)f_{j,A}(E\rightarrow E',\boldsymbol{\Omega}\rightarrow\boldsymbol{\Omega'})}{\sigma^{\dagger}_{j,A}(E')} \nonumber
+\end{equation}
+
+\end{frame}
+
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Adjoint Cross-Sections}
+Electrons reactions are not specifically dependent on the incoming and outgoing angle, 
+but instead on $\mu$. Therefore the equations reduced to:
+\begin{equation}
+\sigma^{\dagger}(E') = \int\int\sigma(E)c(E)f(E \rightarrow E', \mu)dEd\mu
+\end{equation}
+
+\begin{equation}
+f^{\dagger}(E' \rightarrow E, \mu) = \frac{\sigma(E)c(E)f(E \rightarrow E', \mu)}{\sigma^{\dagger}(E')}
+\end{equation}
+
+\begin{equation}
+\sigma^{\dagger}(E' \rightarrow E, \mu) = \sigma(E \rightarrow E', \mu)
+\end{equation}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Elastic Scattering}
+	\begin{itemize}
+	\item Their is no energy loss ($ E = E'$)
+	\item Adjoint and Forward transport will be exactly the same
+	\end{itemize}
+\begin{align}
+\sigma^{\dagger}(E' \rightarrow E, \mu) = &\sigma(E \rightarrow E', \mu) = \nonumber \\
+\sigma^{\dagger}(E, \mu) = &\sigma(E, \mu)
+\end{align}
+
+Therefore equations $(6)$ and $(7)$ reduce to:
+\begin{equation}
+\sigma^{\dagger}(E') = \sigma(E)
+\end{equation}
+
+\begin{equation}
+f^{\dagger}(E, \mu) = f(E, \mu)
+\end{equation}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Elastic Scattering}
+
+\begin{block}{Implementation in FRENSIE}
+	\begin{itemize}
+	\item Add the ability to take an adjoint particle to the forward class
+	\item Add a scatter electron function       
+	\end{itemize}
+\end{block}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Atomic Excitation}
+	\begin{itemize}
+	\item Their is no angular deflection
+	\item Cross-sections are independent of angle
+	\item Each incoming energy will scatter into a unique outgoing energy
+	\item There is a one-to-one correspondence between the incoming and outgoing energy
+	\end{itemize}
+
+\begin{align}
+\sigma^{\dagger}(E' \rightarrow E, \mu) = &\sigma(E \rightarrow E', \mu) = \nonumber \\
+\sigma^{\dagger}(E') = &\sigma(E)
+\end{align}
+
+\begin{equation}
+f^{\dagger}(E', \mu) = \frac{\sigma(E)f(E, \mu)}{\sigma^{\dagger}(E')} = f(E, \mu)
+\end{equation}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Atomic Excitation}
+
+\begin{block}{Implementation in FRENSIE}
+	\begin{itemize}
+	\item Create energy dependent electron energy gain data tables
+		\begin{itemize}
+		\item Replace the incoming energy with the outgoing energy in the ACE energy loss tables
+		\item Use interpolation to create a more uniform energy bin structure
+		\end{itemize}
+	
+	\item Create Adjoint Atomic Excitation class similar to forward case
+	\end{itemize}
+\end{block}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Bremsstrahlung}
+	\begin{itemize}
+	\item Angular deflection is assumed to be negligible
+	\item Cross-sections are independent of angle
+	\end{itemize}
+
+\begin{align}
+\sigma^{\dagger}(E' \rightarrow E, \mu) = & \sigma(E \rightarrow E', \mu) =\nonumber \\
+\sigma^{\dagger}(E' \rightarrow E) = & \sigma(E \rightarrow E') = \sigma(E)f(E \rightarrow E')
+\end{align}
+
+\begin{equation}
+\sigma^{\dagger}(E') = \int\sigma(E)f(E \rightarrow E')dE
+\end{equation}
+
+\begin{equation}
+f^{\dagger}(E' \rightarrow E) = \frac{\sigma(E)f(E \rightarrow E')}{\sigma^{\dagger}(E')}
+\end{equation}
+
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Bremsstrahlung}
+
+\begin{block}{Implementation in FRENSIE}
+	\begin{itemize}
+	\item Create 2D electron energy gain pdf data tables
+		\begin{itemize}
+		\item Numerically integrate the cross section for a given energy loss over all incident energies
+		\item Use interpolation to create a energy bin structure
+		\item Create a pdf for each outgoing energy bin
+		\end{itemize}
+	
+	\item Create new adjoint Bremsstrahlung class
+	\end{itemize}
+\end{block}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Electroionization}
+	\begin{itemize}
+	\item A second electron is produced
+	\item There is a unique angle for each $E \rightarrow E'$ pair
+	\end{itemize}
+
+\begin{equation}
+p(E \rightarrow E', \mu) = f(E \rightarrow E')
+\end{equation}
+
+\begin{equation}
+\sigma^{\dagger}(E') = \int\sigma(E)f(E \rightarrow E')dE
+\end{equation}
+
+\begin{equation}
+f^{\dagger}(E'\rightarrow E, \mu) = \frac{\sigma(E)f(E \rightarrow E')}{\sigma^{\dagger}(E')} 
+\end{equation}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Braking Down the Adjoint Electroionization Cross-Section}
+	\begin{itemize}
+	\item The adjoint cross-section can be broken into two parts corresponding to the primary and secondary particle
+	\item The primary particle has a energy range: ~~~~$E/2 \leq E' \leq E$
+	\item The secondary particle has a energy range: ~$E_{min} \leq E' \leq E/2$
+	\end{itemize}
+
+
+\begin{align}
+\sigma^{\dagger}(E') = &\sigma^{\dagger}_{prim}(E') + \sigma^{\dagger}_{sec}(E') \nonumber \\
+= & \int\sigma(E) \Big( f_{prim}(E \rightarrow E') + f_{sec}(E \rightarrow E') \Big)dE
+\end{align}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Electroionization}
+
+\begin{block}{Implementation in FRENSIE}
+	\begin{itemize}
+	\item Create 2D electron energy gain pdf data tables
+		\begin{itemize}
+		\item Numerically integrate the cross section for a given outgoing electron energy over all incident electron energies
+		\item Use interpolation to create a energy bin structure
+		\item Create a pdf for each knock-on energy bin
+		\end{itemize}
+	
+	\item Create new adjoint Electroionization template class
+	\end{itemize}
+\end{block}
+
+\end{frame}
+
+%%----------------------------------------------------------------------------%%
+\end{document}
