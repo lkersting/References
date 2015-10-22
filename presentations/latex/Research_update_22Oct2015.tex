@@ -1,0 +1,99 @@
+\documentclass{beamer}
+\usetheme[white]{Wisconsin}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+\usepackage{amsthm} \usepackage{amsmath}
+%% \usepackage{eqnarray}
+\usepackage[mathcal]{euscript} \usepackage{color}
+\usepackage{textcomp}
+\usepackage{algorithm,algorithmic}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[absolute,overlay]{textpos}
+  \setlength{\TPHorizModule}{1mm}
+  \setlength{\TPVertModule}{1mm}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+  backgroundcolor=\color{lbcolor},
+  tabsize=4,
+  rulecolor=,
+  language=c++,
+  basicstyle=\scriptsize,
+  upquote=true,
+  aboveskip={1.5\baselineskip},
+  columns=fixed,
+  showstringspaces=false,
+  extendedchars=true,
+  breaklines=true,
+  prebreak =
+  \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+  frame=single,
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  identifierstyle=\ttfamily,
+  keywordstyle=\color[rgb]{0,0,1},
+  commentstyle=\color[rgb]{0.133,0.545,0.133},
+  stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+
+%% colors
+\setbeamercolor{boxheadcolor}{fg=white,bg=UWRed}
+\setbeamercolor{boxbodycolor}{fg=black,bg=white}
+
+%%----------------------------------------------------------------------------%%
+\author{Luke J. Kersting
+    \\ NEEP
+    \\ University of Wisconsin - Madison
+    \\ FRENSIE Meeting
+}
+
+\date{\today}
+\title{Review of Summer at Sandia National Lab}
+\begin{document}
+\maketitle
+
+%%----------------------------------------------------------------------------%%
+\begin{frame}{Outline}
+
+  \begin{itemize}
+    \item Interaction at Sandia
+    \item Condensed History's History
+    \item Moment Preserving Method
+    \item The Evaluated Electron Data Library (EEDL)
+    \item Adjoint Analog Transport
+  \end{itemize}
+
+\end{frame}
+
+  %%----------------------------------------------------------------------------%%
+  \begin{frame}{Condensed History Electron Transport}
+
+  \begin{block}{Electron’s charge complicates analog simulation of events}
+    \begin{itemize}
+      \item Neutral particles may scatter a couple dozen times over a distance
+      \item SElectrons may scatter 10,000 or more times over the same distance
+      \item Analog simulation is impractical
+      \item Simulation of hard electron transport events
+    \end{itemize}
+  \end{block}
+    
+  \begin{block}{A “Condensed” Random Walk method was developed}
+    \begin{itemize}
+      \item Electrons are moved a set step length
+      \item A multiply scattering theory is sampled to find the outgoing direction
+      \item The Continuous Slowing Down Approximation (CSDA) is used to calculate energy loss
+      \item Production of secondary are averaged
+      \item Approximations don’t hold below 1 keV
+      \item Uses infinite medium approximation
+    \end{itemize}    
+  \end{block}  
+
+\end{frame}
+
+\end{document}
