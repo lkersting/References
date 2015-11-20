@@ -1,0 +1,3 @@
+#!python
+cubit.cmd('set node constraint on')
+cubit.cmd('open "/home/lkersting/research/documents/testing/electron_forward_testing/spheres_infinite_medium2.cub"')
